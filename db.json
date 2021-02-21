@@ -1,0 +1,83 @@
+{
+  
+  "questions": [
+    {
+        "id": 1,
+        "type": "radio",
+        "value": "car",
+        "title": "Você é ansioso?",
+        "isRequired": true,
+        "colCount": 4,
+        "choices": [
+            "Não",
+            "Leve",
+            "Moderado",
+            "Intenso"
+        ]
+    },
+    {
+      "id": 2,
+      "type": "radio",
+      "value": "car",
+      "title": "Você frequentemente se sente irritado ou zangado?",
+      "isRequired": true,
+      "colCount": 4,
+      "choices": [
+          "Não",
+          "Leve",
+          "Moderado",
+          "Intenso"
+      ]
+  }
+],
+  "questionnaires": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Carlão",
+      "username": 1,
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "name": "Giuliano",
+      "username": 1,
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "Beatriz",
+      "username": 1,
+      "password": "password"
+    }
+
+  ],
+  "booking":[ {
+    "id": 1,
+    "date": "uma data",
+    "time": "uma hora",
+    "type": "tipo de consulta"
+  }],
+
+  "protocols": [{
+    
+  }],
+
+  "answers":[ {
+      "id": 1,
+      "test": "teste",
+      "questionnairesId": 1,
+      "questions": {
+        "01": 1,
+        "02": 2
+      }
+    }]
+}
+
+

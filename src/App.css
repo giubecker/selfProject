@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+:root {
+  font-size: 60%;
+  --color-background-primary: #3fbcb2;
+  --color-background-secundary: #dfeaf4;
+  --color-font-primary: #FFFFFF;
+  --color-primary-lighter: #8bd8cd;
+  --color-secundary: #5ba39d;
+  --color-secundary-add: #9ee4de;
+  --color-secundary-dark: #468b86;
+  --color-secundary-dark-add: #7bc4be;
+  --color-title-in-primary: #FFFFFF;
+  text-decoration: none important!;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+
+  padding: 0rem;
+  margin: 0rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .home, .reports, .products{
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
+} */
+
+body {
+  text-align: center;
+  background-color: #5fdbd1;
+  margin: 0px;
+  color: #333;
+  --type-second: 'Spectral', Georgia;
+  font-family: var(--type-first);
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2,
+h3,
+h4,
+p{
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box p{
+  font-size: large;
 }
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+  }
+  .box {
+  margin-top: -20px;
+  width: 50%;
+  height:max-content;
+  background: #fff;
+  border-radius: 40px;
+  }
+
+  .container .box {
+    padding: 4rem;
+  }
+  
+  body {
+  margin: 0px;
+  }
+
+  .animeUp {
+    opacity: 0;
+    transition: translateY(-20px);
+    animation: animeUp 0.3s forwards;
+  }
+
+  .title {
+
+  }
+
+  @keyframes animeUp {
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }

@@ -1,0 +1,31 @@
+div div {
+    justify-content: start;
+}
+
+div div h1 {
+    justify-content: start;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.questionnaire-button {
+    width: 98% ;
+    height: 4.6rem;
+    background: #3fbcb2;
+    color: #fff;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    text-decoration: none important!;
+    margin: 1rem;
+}
+
+.questionnaires-button:hover {
+    background: #468b86;
+    color: #fff;
+    text-decoration: none important!;
+}
