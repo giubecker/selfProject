@@ -7,22 +7,28 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Website from "./Components/Screens/Website";
+import 'bootstrap';
 import Login from "./Components/Screens/Login";
 import System from './Components/Screens/System';
 import Home from './Components/System/Home';
-import Questionnaires from './Components/System/Questionnaires';
-import Library from "./Components/System/Library";
-import Booking from "./Components/System/Booking";
+import Questionnaires from './Components/Questionnaires/Questionnaires';
+import Library from "./Components/Library/Library";
+import Scheduling from "./Components/Scheduling/Scheduling";
+import Schedule from "./Components/Scheduling/Schedule";
 import Achievements from "./Components/System/Achievements";
 import Doubts from "./Components/System/Doubts";
-import Profile from "./Components/System/Profile";
+import Profile from "./Components/Profile/Profile";
 import Protocols from "./Components/System/Protocols";
-import Recipes from "./Components/System/Recipes";
+import Recipes from "./Components/Recipes/Recipes";
+import Recipe from "./Components/Recipes/Recipe";
 import Contacts from "./Components/System/Contacts";
 import Notifications from "./Components/System/Notifications";
 import Graphics from "./Components/System/Graphics"; 
 import {UserStorage} from './UserContext';
-
+import Questionnaire from './Components/Questionnaires/Questionnaire';
+import StoreProvider from './Components/Store/Provider';
+import RoutesPrivate from './Components/Routes/Private/Private';
+import EditProfile from "./Components/Profile/EditProfile";
 
 function App() {
   return  (
@@ -33,20 +39,21 @@ function App() {
     
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-        <Route exact path="/">
+       <StoreProvider>
+       <Switch>
+        {/* <Route exact path="/">
             <Website />
-          </Route>
+          </Route> */}
           <Route exact path="/login">
             <Login />
           </Route>
           <Route exact path="/system">
             <System />
           </Route>
-          <Route exact path="/home">
+          <RoutesPrivate exact path="/home">
             <Home />
-          </Route>
-          <Route exact path="/protocols">
+          </RoutesPrivate>
+          <Route path="/protocols">
             <Protocols />
           </Route>
           <Route exact path="/notifications">
@@ -55,8 +62,14 @@ function App() {
           <Route exact path="/recipes">
             <Recipes />
           </Route>
+          <Route exact path="/recipe">
+            <Recipe />
+          </Route>
           <Route exact path="/questionnaires">
             <Questionnaires />
+          </Route>
+          <Route exact path="/questionnaire/:id">
+            <Questionnaire />
           </Route>
           <Route exact path="/contacts">
             <Contacts />
@@ -64,8 +77,11 @@ function App() {
           <Route exact path="/library">
             <Library />
           </Route>
-          <Route exact path="/booking">
-            <Booking />
+          <Route exact path="/scheduling">
+            <Scheduling />
+          </Route>
+          <Route exact path="/scheduling/schedule/:id">
+            <Schedule />
           </Route>
           <Route exact path="/achievements">
             <Achievements />
@@ -76,10 +92,18 @@ function App() {
           <Route exact path="/profile">
             <Profile />
           </Route>
+          <Route exact path="/editprofile">
+            <EditProfile />
+          </Route>
+          <Route exact path="/website">
+            <Website />
+          </Route>
           <Route exact path="/graphics">
             <Graphics />
           </Route>
         </Switch>
+
+       </StoreProvider>
       </div>
     </Router>
     </UserStorage>

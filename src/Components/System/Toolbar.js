@@ -31,7 +31,7 @@ export const Toolbar = () => {
               <Link to="/library">Material Didático</Link>
             </li>
             <li>
-              <Link to="/booking">Agendamentos</Link>
+              <Link to="/scheduling">Agendamentos</Link>
             </li>
             <li>
               <Link to="/achievements">Conquistas</Link>

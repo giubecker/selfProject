@@ -12,7 +12,72 @@
     padding: 5rem;
     border-radius: 5rem;
     box-shadow: 10px 5px 50px rgba(0, 0, 0, 0.336);
-    height: 300px;
+    height: 150;
     background: #fff;
     }
 
+    .login-icon {
+        margin: 6px;
+    }
+
+.title{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.inputs {
+    padding: 1rem;
+}
+
+.form {
+    margin: 5px 0;
+    border-width: medium;
+    border-color: var(--color-line-in-white);
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    
+}
+
+
+
+.error{
+    padding: 1rem;
+}
+.buttons {
+    justify-content: space-evenly;
+}
+
+.button {
+    width: 13rem;
+    height: 4.6rem;
+    background: var(--color-primary-button);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    text-decoration: none important!;
+    margin: 1rem;
+    }
+
+      
+.button:hover {
+    transition: color 400ms;
+    background: var(--color-secondary-button);
+  }
+  
+  .button:invalid {
+    background: rgb(206, 62, 62);
+    border-radius: 0.8rem;
+  }
+
+    div div h1 {
+        color: var(--color-text-complement-grey);
+    }
+
+
+
+    

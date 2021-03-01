@@ -1,16 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Toolbar from '../System/Toolbar';
 import Sidebar from '../System/Sidebar';
 import './Home.css';
+import Modal from './Modal';
+
 
 export const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
   return (
     <>
         <Sidebar/>
             <div className='container'>
        
         <div className='box'>
-        <p>AGENDAMENTOS</p>
+
+        {/* <button onClick={() => setIsOpen(true)}>Open Modal</button>
+        <Modal open={isOpen} onClose={() => setIsOpen(false)}>Hey Handsome</Modal> */}
+        
+        <p>INÍCIO</p>
         <br/>
         AMOR
         <br/>

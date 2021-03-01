@@ -9,7 +9,7 @@ export const Notifications = () => {
                 <div className='container'>
            
             <div className='box'>
-            <p>AGENDAMENTOS</p>
+            <p>NOTIFICAÇÕES</p>
             <br/>
             AMOR
             <br/>

@@ -1,83 +1,433 @@
 {
-  
   "questions": [
     {
-        "id": 1,
-        "type": "radio",
-        "value": "car",
-        "title": "Você é ansioso?",
-        "isRequired": true,
-        "colCount": 4,
-        "choices": [
-            "Não",
-            "Leve",
-            "Moderado",
-            "Intenso"
-        ]
+      "id": 1,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você é ansioso?",
+      "isRequired": true
     },
     {
       "id": 2,
       "type": "radio",
-      "value": "car",
-      "title": "Você frequentemente se sente irritado ou zangado?",
-      "isRequired": true,
-      "colCount": 4,
-      "choices": [
-          "Não",
-          "Leve",
-          "Moderado",
-          "Intenso"
-      ]
-  }
-],
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você frequentemente se sente irritado ou zangado?",
+      "isRequired": true
+    },
+    {
+      "id": 3,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Tem insônia ou diFculdade para dormir?",
+      "isRequired": true
+    },
+    {
+      "id": 4,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Acha sua vida monótona, sem graça?",
+      "isRequired": true
+    },
+    {
+      "id": 5,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você Fca remoendo acontecimentos do passados e buscando explicações?",
+      "isRequired": true
+    },
+    {
+      "id": 6,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você guarda rancor?",
+      "isRequired": true
+    },
+    {
+      "id": 7,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Sua persistência com seus objetivos está prejudicada?",
+      "isRequired": true
+    },
+    {
+      "id": 8,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você sente que seu maior prazer é a comida?",
+      "isRequired": true
+    },
+    {
+      "id": 9,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você sente diFculdade nos seus relacionamentos proFssionais, amorosos ou familiares?",
+      "isRequired": true
+    },
+    {
+      "id": 10,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você possui a tendência de procrastinar, costuma deixar para amanhã?",
+      "isRequired": true
+    },
+    {
+      "id": 11,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você tem uma estima baixa?",
+      "isRequired": true
+    },
+    {
+      "id": 12,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você frequentemente sente que não fazo suFciente ou não tem os recursos necessários para se dar bem?",
+      "isRequired": true
+    },
+    {
+      "id": 13,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você tem diFculdade para manter hábitos saudáveis?",
+      "isRequired": true
+    },
+    {
+      "id": 14,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você tem se sentido desmotivado?",
+      "isRequired": true
+    },
+    {
+      "id": 15,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você tem uma estima baixa?",
+      "isRequired": true
+    },
+    {
+      "id": 16,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você é impulsivo?",
+      "isRequired": true
+    },
+    {
+      "id": 17,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Com frequência sente medo, tristeza, apatia ou culpa?",
+      "isRequired": true
+    },
+    {
+      "id": 18,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você sente diFculdade para relaxar?",
+      "isRequired": true
+    },
+    {
+      "id": 19,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você se preocupa muito e com facilidade?",
+      "isRequired": true
+    },
+    {
+      "id": 20,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você se sente perdido com relação aos seus objetivos de vida?",
+      "isRequired": true
+    },
+    {
+      "id": 21,
+      "type": "radio",
+      "title": "Questionário de Saúde Mental",
+      "questionnaireId": 1,
+      "question": "Você tem diFculdade de persistir nos seus objetivos?",
+      "isRequired": true
+    }
+  ],
+  "formQuestions": [
+    {
+      "id": 1,
+      "title": "Quantas refeições você costuma fazer por dia? Contabilizar Snacks",
+      "questionnaireId": 2
+    },
+    {
+      "id": 2,
+      "title": "Cite 10 alimentos que você imagina que sejam os mais consumidos na sua rotina",
+      "questionnaireId": 2
+    },
+    {
+      "id": 3,
+      "title": "Cite seus 10 alimentos preferidos",
+      "questionnaireId": 2
+    },
+    {
+      "id": 4,
+      "title": "Quantas refeições você costuma fazer por dia? Contabilizar Snacks.",
+      "questionnaireId": 2
+    },
+    {
+      "id": 5,
+      "title": "Possui alguma alergia alimentar? ",
+      "questionnaireId": 2
+    },
+    {
+      "id": 6,
+      "title": "Que alimentos não consegue comer?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 7,
+      "title": "Com que frequência ingere bebidas alcoólicas? Se sim, quais que mais consome?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 8,
+      "title": "Quais gorduras costuma usar para cozinhar?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 9,
+      "title": "Quanto tempo consegue !car em jejum sem sentir fome?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 10,
+      "title": "Com que frequência e evacua? - Costumas ter alguma ter alguma di!culdade no banheiro? - Cite",
+      "questionnaireId": 2
+    },
+    {
+      "id": 11,
+      "title": "Algum alimento ou grupo alimentar lhe causa diarreia após consumido?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 12,
+      "title": "Algum alimento ou grupo alimentar lhe causa diarreia após consumido?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 13,
+      "title": "Jejum - Qual foi o maior período de jejum que já cumpriu?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 14,
+      "title": "Jejum - Qual costuma ser o intervalo entre suas refeições?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 15,
+      "title": "Jejum - Que sintomas experimenta durante o jejum?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 16,
+      "title": "Jejum - Quanto tempo antes de deitar faz sua última refeição?",
+      "questionnaireId": 2
+    },
+    {
+      "id": 17,
+      "title": "Jejum - Quanto tempo após acordar faz sua primeira refeição?",
+      "questionnaireId": 2
+    }
+  ],
   "questionnaires": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Questionário de Saúde Mental",
+      "questionsQuantity": 21
+    },
+    {
+      "id": 2,
+      "title": "Questionário de Avaliação Inicial",
+      "questionsQuantity": 21
     }
   ],
   "users": [
     {
       "id": 1,
       "name": "Carlão",
-      "username": 1,
+      "username": "carlos",
       "password": "password"
     },
     {
       "id": 2,
       "name": "Giuliano",
-      "username": 1,
+      "username": "giubohn",
       "password": "password"
     },
     {
       "id": 3,
       "name": "Beatriz",
-      "username": 1,
+      "username": "betabohn",
       "password": "password"
     }
-
   ],
-  "booking":[ {
-    "id": 1,
-    "date": "uma data",
-    "time": "uma hora",
-    "type": "tipo de consulta"
-  }],
-
-  "protocols": [{
-    
-  }],
-
-  "answers":[ {
+  "scheduling": [
+    {
+      "type": "rotina",
+      "date": "um dia",
+      "hour": "uam hora",
+      "notes": "Estou com problemas de fadiga"
+    }
+  ],
+  "protocols": [
+    {
       "id": 1,
-      "test": "teste",
+      "title": "Avaliação Global de Saúde",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "phases": "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt <br/> labore et dolore magna aliqua...",
+      "duration": "1 mes"
+    },
+    {
+      "id": 2,
+      "title": "Programa de Saúde Metabólica e Longevidade Funcional",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "phases": "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt <br/> labore et dolore magna aliqua...",
+      "duration": "3 meses"
+    },
+    {
+      "id": 3,
+      "title": "Reversão da Resistência Insulínica",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "phases": "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt <br/> labore et dolore magna aliqua...",
+      "duration": "6 meses"
+    },
+    {
+      "id": 4,
+      "title": "Reversão da Obesidade",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "phases": "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt <br/> labore et dolore magna aliqua...",
+      "duration": "6 mes"
+    },
+    {
+      "id": 5,
+      "title": "Reversão da Diabetes Tipo II",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "phases": "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> sed do eiusmod tempor incididunt <br/> labore et dolore magna aliqua...",
+      "duration": "6 meses"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "type": "radio",
       "questionnairesId": 1,
-      "questions": {
-        "01": 1,
-        "02": 2
-      }
-    }]
+      "questionId": 1,
+      "answer": 1
+    }
+  ],
+  "time": [
+    "8:00",
+    "9:00",
+    "10:00",
+    "11:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00"
+  ],
+  "date": [
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira"
+  ],
+  "ideas": [
+    {
+      "title": "First idea",
+      "premises": [
+        "Premise one",
+        "Premise two"
+      ],
+      "conclusion": "Example conclusion"
+    },
+    {
+      "title": "Second idea",
+      "premises": [
+        "Premise one",
+        "Premise two"
+      ],
+      "conclusion": "Example conclusion"
+    },
+    {
+      "title": "Third idea",
+      "premises": [
+        "Premise one",
+        "Premise two"
+      ],
+      "conclusion": "Example conclusion"
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "name": "Giuliano",
+      "ocupation": "Engenheiro da Computação",
+      "phone": "(55) 9 99236666",
+      "email": "giubohn@hotmail.com"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "title": "qual seu nome?"
+    },
+    {
+      "id": 2,
+      "title": "qual seu telefone?"
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "Nome": "Giuliano Bohn",
+      "Idade": "28 anos",
+      "Telefone": "(55) 99923-6666",
+      "Email": "giubohn@hotmail.com",
+      "Endereço": "Avenida Avaí 465",
+      "CEP": "98910-000",
+      "ContatoEmergencia": "Beatriz Bohn",
+      "TelefoneEmergencia": "(55) 99669-6119",
+      "TipoSanguineo": "A+",
+      "Medicamentos": "Clonazepan"
+    }
+  ],
+  "answer": [
+    {
+      "id": 1,
+      "body": "some other comment",
+      "postId": 1
+    },
+    [],
+    [],
+    []
+  ]
 }
-
-

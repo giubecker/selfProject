@@ -1,0 +1,22 @@
+
+/* SESSÃO PROTOCOLOS */
+
+.plans-title {
+    text-align: center;
+    color: var(--color-text-title-darker);
+}
+
+.plans {
+    font-family: Montserrat, sans-serif;
+    background-color: #fff;
+}
+
+.plans-item {
+    margin-top: 20px;
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+
+.plans-item:hover {
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+}

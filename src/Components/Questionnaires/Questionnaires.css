@@ -24,8 +24,8 @@ div div h1 {
     margin: 1rem;
 }
 
-.questionnaires-button:hover {
-    background: #468b86;
-    color: #fff;
-    text-decoration: none important!;
-}
+
+.questionnaire-button:hover {
+    transition: color 400ms;
+    background: var(--color-secondary-button);
+  }

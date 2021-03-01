@@ -1,7 +1,5 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/fa';
 
 
 export const SidebarData = [
@@ -55,7 +53,7 @@ export const SidebarData = [
     },
     {
         title: 'Agendamentos',
-        path: '/booking',
+        path: '/scheduling',
         icon: <FaIcons.FaRegCalendarAlt/>,
         cName: 'nav-text'
     },

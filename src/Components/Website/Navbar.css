@@ -1,0 +1,55 @@
+.navbar {
+    margin-bottom: 0;
+    background: var(--color-background-primary) !important;
+    z-index: 9999;
+    border: 0;
+    font-size: 13px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 3px;
+    border-radius: 0;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+}
+
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #121111 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.navbar-icon {
+    padding-top: 8 !important;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.logo-small {
+    color: #121111;
+    font-size: 50px;
+}
+
+.icon {
+    color: #8f8b8b65 !important;
+    font-size: 100px;
+    margin: 10px;
+}
+
+.description {
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}

@@ -1,0 +1,39 @@
+.videos {
+    font-family: Montserrat, sans-serif;
+    background-color: var(--color-background-primary);
+    color: #fff;
+    text-align: center;
+    overflow: auto;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.library-container {
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+    max-width: 900px;
+    margin: 20px 20px;
+    background-color: var(--color-box-base);
+    color: var(--color-background-primary);
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.8rem;
+}
+
+.custom .p-scrollpanel-wrapper {
+    border-right: 9px solid #f4f4f4;
+}
+
+.custom .p-scrollpanel-bar {
+    background-color: var(--color-background-primary);
+    opacity: 1;
+    transition: background-color .3s;
+}
+
+.custom .p-scrollpanel-bar:hover {
+    background-color: var(--color-primary-lighter);
+}

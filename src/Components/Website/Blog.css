@@ -1,0 +1,24 @@
+
+
+
+/* SESSÃO BLOG */
+
+.blog-title {
+    text-align: center;
+    color: #fff;
+}
+
+.blog {
+    font-family: Montserrat, sans-serif;
+    background: var(--color-background-primary);
+    color: #fff;
+}
+
+.blog-item {
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+
+.blog-item:hover {
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+}
