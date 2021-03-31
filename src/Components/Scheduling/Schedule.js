@@ -1,102 +1,135 @@
-import React, {useState, useEffect} from 'react'
-import './Schedule.css';
-import Error from '../Helper/Error';
-import axios from 'axios';
-import Sidebar from '../System/Sidebar';
+import React, { useState, useEffect } from "react";
+import "./Schedule.css";
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Error from "../Helper/Error";
+import axios from "axios";
+import Sidebar from "../System/Sidebar";
 
 export const Schedule = () => {
+  const history = useHistory();
+  const [values, setValues] = useState({});
 
-    const initialValue  = {
-        type: '',
-        date: '',
-        hour: ''
-    }
+  function onChange(event) {
+    const { name, value, id } = event.target;
+    setDropdown(event.target.value);
+    //const {id, valor} = event.target;
+    // console.log ({name, value});
+    // values[name] = value;
+    setValues({ ...values, [name]: value });
 
-    const schedule = {
-        type: 'rotinas',
-        date: 'terça',
-        hour: '12:30'
+    // setValores({...valores, [id]: valor });
+  }
 
-}
-    const [date, setDate] = useState([initialValue]);
+  const initialValue = {
+    type: "",
+    date: "",
+    hour: "",
+  };
 
+  const schedule = {
+    type: "rotinas",
+    date: "terça",
+    hour: "12:30",
+  };
+  const [date, setDate] = useState([initialValue]);
 
-    useEffect(() => {
-    axios.get('http://localhost:3000/scheduling')
-    .then((response) => {
-        setDate(response.data);
-        console.log(response.data);
-   
+  function onSubmit(event) {
+    event.preventDefault();
+    axios.post("http://localhost:9002/reservados", values).then((response) => {
+      history.push("/scheduling");
     });
-}, [])
+  }
 
-// console.log(acheduling);
-    const [radio, setRadio] = React.useState('');
-    const [radiotwo, setRadiotwo] = React.useState('');
-    const [radiothree, setRadiothree] = React.useState('');
-    const [radiofour, setRadiofour] = React.useState('');
-    const [dropdown, setDropdown] = useState('Selecione');
+  useEffect(() => {
+    axios.get("http://localhost:9002/scheduling/").then((response) => {
+      setDate(response.data);
+      console.log(response.data);
+    });
+  }, []);
 
-    function handleChange({target}) {
-        setRadio(target.value);
-    }
+  // console.log(acheduling);
+  const [radio, setRadio] = React.useState("");
+  const [radiotwo, setRadiotwo] = React.useState("");
+  const [radiothree, setRadiothree] = React.useState("");
+  const [radiofour, setRadiofour] = React.useState("");
+  const [dropdown, setDropdown] = useState("Selecione");
 
-    return (
-        <>
+  function handleChange({ target }) {
+    setRadio(target.value);
+  }
 
-<Sidebar/>
-<div className='container'>
-        <div className='box schedule'>
-        
-            <div className='content'>
+  const [dates, setDates] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:9002/agendamentos").then((response) => {
+      setDates(response.data);
+      //console.log(response.data);
+    });
+  }, []);
+
+  return (
+    <>
+      <Sidebar />
+      <div className="container">
+        <div className="box schedule">
+          <div className="content">
             <h1 className="title">Novo Agendamento</h1>
-            {/* <h1 className='title'>{questions[0].title}</h1> */}
+            <form onSubmit={onSubmit}>
+              {date.map((date, index) => (
+                <div key={date.id} className="form">
+                  <h2></h2>
+                  <label>Tipo: </label>
+                  <select
+                    className="input"
+                    name="tipo"
+                    value={dropdown}
+                    onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
+                  >
+                    <option value="Rotina">Rotina</option>
+                    <option value="Urgência">Urgência</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                  <br />
+                  <label>Horários:</label>
+                  <select
+                    className="input"
+                    value={dropdown}
+                    name="horário"
+                    onChange={onChange}
+                  >
+                    {dates.map((date, index) => (
+                      <option value={date.dateTime} onChange={onChange}>
+                        {date.dateTime}
+                      </option>
+                    ))}
+                  </select>
+                  <br />
 
-{date.map((date, index) => (
-        <div key={date.id} className='form'>  
-        <h2 key={date.type}>{date.type}</h2>
-        <h2></h2>
-        <label>Tipo: </label>
-        <select className="input" value={dropdown} onChange={(e) =>{setDropdown(e.target.value)}}>
-                <option value='rotina'>Rotina</option>
-                <option value='urgencia'>Urgência</option>
-                <option value='outros'>Outros</option>
-            </select>
-            <br/>
-            <label>Datas Disponíveis: </label>
-        <select className="input" value={dropdown} onChange={(e) =>{setDropdown(e.target.value)}}>
-                <option value='20/03'>20/03</option>
-                <option value='21/03'>21/03</option>
-                <option value='24/03'>24/03</option>
-                <option value='25/03'>25/03</option>
-                <option value='26/03'>26/03</option>
-            </select>
-            <br/>
-            <label>Horários Disponíveis: </label>
-        <select className="input" value={dropdown} onChange={(e) =>{setDropdown(e.target.value)}}>
-                <option value='8:00'>8:00</option>
-                <option value='9:00'>9:00</option>
-                <option value='10:00'>10:00</option>
-                <option value='11:00'>11:00</option>
-                <option value='13:00'>13:00</option>
-            </select>
-<br/>
-<label>Observações: </label>
-        <textarea className="input"  ></textarea>
-        <br/>
-        <button className="button"> Salvar</button>
-        
-   
-
-        </div>
-    ))}
-<br/>
-
+                  <br />
+                  <label>Observações: </label>
+                  <textarea
+                    className="input"
+                    name="observações"
+                    onChange={onChange}
+                  ></textarea>
+                  <br />
                 </div>
-            </div>
+              ))}
+              <Link to="/scheduling">
+                {" "}
+                <button className="button" type="submit">
+                  Voltar
+                </button>
+              </Link>{" "}
+              <button className="button" type="submit">
+                Salvar
+              </button>
+            </form>
+            <br />
+          </div>
         </div>
-        </>
-       
-    )
-}
+      </div>
+    </>
+  );
+};
 export default Schedule;

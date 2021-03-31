@@ -4,7 +4,7 @@ import Error from "../Helper/Error";
 import axios from "axios";
 import Sidebar from "../System/Sidebar";
 
-export const Recipe = () => {
+export const ViewRecipe = () => {
   const initialValue = {
     type: "",
     date: "",
@@ -87,6 +87,21 @@ export const Recipe = () => {
                   <option value="outros">5ml</option>
                 </select>
                 <br />
+                <select
+                  className="input"
+                  value={dropdown}
+                  onChange={(e) => {
+                    setDropdown(e.target.value);
+                  }}
+                >
+                  <option value="20/03">20/03</option>
+                  <option value="21/03">21/03</option>
+                  <option value="24/03">24/03</option>
+                  <option value="25/03">25/03</option>
+                  <option value="26/03">26/03</option>
+                </select>
+                <br />
+                <br />
                 <div>
                   {" "}
                   <label htmlFor="title">Observações </label>
@@ -114,4 +129,4 @@ export const Recipe = () => {
     </>
   );
 };
-export default Recipe;
+export default ViewRecipe;

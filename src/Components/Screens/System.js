@@ -23,7 +23,7 @@
 // import Recipes from "../Recipes/Recipes";
 // import Contacts from "../../Components/System/Contacts";
 // import Notifications from "../../Components/System/Notifications";
-// import Graphics from "../../Components/System/Graphics"; 
+// import Graphics from "../../Components/System/Graphics";
 // import { Footer } from '../System/Footer';
 // import Questionnaire from '../Questionnaires/Questionnaire';
 
@@ -40,7 +40,7 @@
 //     <UserStorage>
 //     <Router>
 //       <div>
-    
+
 //         {/* A <Switch> looks through its children <Route>s and
 //             renders the first one that matches the current URL. */}
 //         <Switch>

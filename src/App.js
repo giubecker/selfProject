@@ -21,6 +21,7 @@ import Profile from "./Components/Profile/Profile";
 import Protocols from "./Components/System/Protocols";
 import Recipes from "./Components/Recipes/Recipes";
 import Recipe from "./Components/Recipes/Recipe";
+import ViewRecipe from "./Components/Recipes/ViewRecipe";
 import Contacts from "./Components/System/Contacts";
 import Notifications from "./Components/System/Notifications";
 import Graphics from "./Components/System/Graphics"; 
@@ -29,6 +30,9 @@ import Questionnaire from './Components/Questionnaires/Questionnaire';
 import StoreProvider from './Components/Store/Provider';
 import RoutesPrivate from './Components/Routes/Private/Private';
 import EditProfile from "./Components/Profile/EditProfile";
+import LibraryRecipe from "./Components/Library/LibraryRecipe";
+import LibraryVideo from "./Components/Library/LibraryVideo";
+import LibraryText from "./Components/Library/LibraryText";
 
 function App() {
   return  (
@@ -62,8 +66,11 @@ function App() {
           <Route exact path="/recipes">
             <Recipes />
           </Route>
-          <Route exact path="/recipe">
+          <Route exact path="/recipes/new">
             <Recipe />
+          </Route>
+          <Route exact path="/recipes/view">
+            <ViewRecipe />
           </Route>
           <Route exact path="/questionnaires">
             <Questionnaires />
@@ -76,6 +83,15 @@ function App() {
           </Route>
           <Route exact path="/library">
             <Library />
+          </Route>
+          <Route exact path="/library/recipes/:id">
+            <LibraryRecipe />
+          </Route>
+          <Route exact path="/library/video/:id">
+            <LibraryVideo />
+          </Route>
+          <Route exact path="/library/text/:id">
+            <LibraryText />
           </Route>
           <Route exact path="/scheduling">
             <Scheduling />
@@ -95,7 +111,7 @@ function App() {
           <Route exact path="/editprofile">
             <EditProfile />
           </Route>
-          <Route exact path="/website">
+          <Route exact path="/">
             <Website />
           </Route>
           <Route exact path="/graphics">
