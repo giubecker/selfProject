@@ -11,8 +11,8 @@ export const Library = () => {
   const header = (
     <img alt="Card" src={Capa} style={{ width: "200px", height: "200px" }} />
   );
-  const title = <span>Título do video</span>;
-  const footer = <span>Descrição do video</span>;
+  const title = <h4>Título do video</h4>;
+  const footer = <h5>Descrição do video</h5>;
 
   return (
     <>
@@ -20,8 +20,8 @@ export const Library = () => {
       <div className="container">
         <div className="box">
           <p>MATERIAL DIDÁTICO</p>
-          <br />
-          <div className="row">
+          
+          <div className="column">
             <div className="library-container">
               <br />
               Videos

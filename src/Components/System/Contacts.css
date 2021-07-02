@@ -19,13 +19,28 @@
 
 .contact-cards{
    text-align: center;
+
 }
 
 .card {
-    align-content: center;
+    padding: 1rem;
+
     border-radius: 1rem;
     min-width: 200px;
     max-width: 300px;
     min-height: 75px;
     background: var(--color-secundary-add);
+    margin: 1rem;
 }
+
+.row {
+    display: flex;
+   
+    
+  }
+  
+  .column {
+    flex: 50%;
+
+    justify-items: center;
+  }

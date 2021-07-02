@@ -3,10 +3,13 @@ import "./Schedule.css";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Error from "../Helper/Error";
+
 import axios from "axios";
 import Sidebar from "../System/Sidebar";
 
-export const Schedule = () => {
+export const Scheduled = () => {
+
+  
   const history = useHistory();
   const [values, setValues] = useState({});
 
@@ -17,8 +20,6 @@ export const Schedule = () => {
     // console.log ({name, value});
     // values[name] = value;
     setValues({ ...values, [name]: value });
-
-    // setValores({...valores, [id]: valor });
   }
 
   const initialValue = {
@@ -37,9 +38,14 @@ export const Schedule = () => {
   function onSubmit(event) {
     event.preventDefault();
     axios.post("http://localhost:9002/reservados", values).then((response) => {
-      history.push("/success");
+      history.push("/scheduling");
     });
   }
+  // function remove() {
+  //   axios.delete("http://localhost:9002/reservados/16", values).then((response) => {
+  //     history.push("/scheduling");
+  //   });
+  // }
 
   useEffect(() => {
     axios.get("http://localhost:9002/scheduling/").then((response) => {
@@ -68,45 +74,22 @@ export const Schedule = () => {
       <div className="container">
         <div className="box schedule">
           <div className="content">
-            <h1 className="title">Novo Agendamento</h1>
+            <h1 className="title">Agendamento</h1>
             <form onSubmit={onSubmit}>
               {date.map((date, index) => (
                 <div key={date.id} className="form">
                   <h2></h2>
                   <label>Tipo: </label>
-                  <select
-                    className="input"
-                    name="tipo"
-                    value={dropdown}
-                    onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
-                  >
-                    <option value="Rotina">Rotina</option>
-                    <option value="Urgência">Urgência</option>
-                    <option value="Outros">Outros</option>
-                  </select>
+Rotina
                   <br />
-                  <label>Horários:</label>
-                  <select
-                    className="input"
-                    value={dropdown}
-                    name="horário"
-                    onChange={onChange}
-                  >
-                    {dates.map((date, index) => (
-                      <option value={date.dateTime} onChange={onChange}>
-                        {date.dateTime}
-                      </option>
-                    ))}
-                  </select>
-                  <br />
+                  <label>Horário: </label>
+
+                  Segunda-feira, 3 de maio às 9:00hrs
 
                   <br />
                   <label>Observações: </label>
-                  <textarea
-                    className="input"
-                    name="observações"
-                    onChange={onChange}
-                  ></textarea>
+            
+TESTE
                   <br />
                 </div>
               ))}
@@ -117,8 +100,15 @@ export const Schedule = () => {
                 </button>
               </Link>{" "}
               <button className="button" type="submit">
-                Salvar
+                Editar
               </button>
+              <Link to="/scheduling">
+              <button className="button" type="button" onClick={() =>   axios.delete("http://localhost:9002/reservados/15", values).then((response) => {
+      history.push("/scheduling");
+    })}>
+                Deletar
+              </button>
+              </Link>
             </form>
             <br />
           </div>
@@ -127,4 +117,4 @@ export const Schedule = () => {
     </>
   );
 };
-export default Schedule;
+export default Scheduled;

@@ -50,10 +50,10 @@ const UserLogin = () => {
     <div className="container-login">
       <div className="box-login">
         <div align="center">
-          <h1 className="title">SELF</h1>
-          <h4 className="login-window-text">
+          <h4 className="title">Bem-vindo!</h4>
+          <h5 className="login-window-text">
             Digite seu usuário e senha para prosseguir
-          </h4>
+          </h5>
           <form onSubmit={onSubmit}>
             <div className="inputs">
               <div className="user-login__form-control">

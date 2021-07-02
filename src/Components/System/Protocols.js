@@ -15,7 +15,7 @@ export const Protocols = () => {
 
   return (
     <>
-      <Sidebar />
+     <Sidebar />
       <div className="container">
         <div className="box">
           <p>PROTOCOLOS</p>
@@ -31,6 +31,27 @@ export const Protocols = () => {
               </div>
             ))}
           </div>
+          <br/>
+<div className="meu-protocolo">
+<p>MEU PROTOCOLO</p>
+          Reversão de Obesidade
+</div>
+<div className="row protocol-detail">
+  <div className="column">
+  <div className="row"> fase 1:<br/> <br/></div>
+  <div className="row"> fase 2:<br/><br/> </div>
+  <div className="row"> fase 3:<br/><br/> </div>
+  <div className="row"> fase 4:<br/> <br/></div>
+  <div className="row"> fase 5:<br/><br/> </div>
+</div>              
+  <div className="column">
+  <div className="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+  <div className="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+  <div className="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+  <div className="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+  <div className="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+</div>
+</div>
         </div>
       </div>
     </>

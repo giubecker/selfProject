@@ -22,16 +22,16 @@ export const SidebarData = [
   },
   {
     title: "Gráficos de Evolução",
-    path: "/graphics",
+    path: "/exams",
     icon: <FaIcons.FaSignal />,
     cName: "nav-text",
   },
-  {
-    title: "Receitas",
-    path: "/recipes",
-    icon: <FaIcons.FaNotesMedical />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Receitas",
+  //   path: "/recipes",
+  //   icon: <FaIcons.FaNotesMedical />,
+  //   cName: "nav-text",
+  // },
   {
     title: "Questionários",
     path: "/questionnaires",
@@ -76,7 +76,7 @@ export const SidebarData = [
   },
   {
     title: "Sair",
-    path: "/login",
+    path: "/exit",
     icon: <FaIcons.FaSignOutAlt />,
     cName: "nav-text",
   },

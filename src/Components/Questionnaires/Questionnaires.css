@@ -6,6 +6,7 @@ div div h1 {
     justify-content: start;
     text-align: left;
     padding-left: 2rem;
+    font-size:larger;
 }
 
 .questionnaire-button {
@@ -28,4 +29,5 @@ div div h1 {
 .questionnaire-button:hover {
     transition: color 400ms;
     background: var(--color-secondary-button);
+    text-decoration: none important!;
   }

@@ -13,6 +13,7 @@ export const Home = () => {
         <div className="box">
           {/* <button onClick={() => setIsOpen(true)}>Open Modal</button>
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>Hey Handsome</Modal> */}
+        
           <p>INÍCIO</p>
           <br />
           AMOR
@@ -22,6 +23,7 @@ export const Home = () => {
           AMOR
         </div>
       </div>
+
     </>
   );
 };

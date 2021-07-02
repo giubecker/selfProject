@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+  .exam-card{
+
+    margin: 2rem;
+    background-color: #c9f8f1;
+    border-radius: 3rem;
+    width: 500;
+    height: 250px;
+  }
+.description{
+  padding-right: 25px;
+}
+  
+  h5 {
+    font-size: 1.2rem;
+  }

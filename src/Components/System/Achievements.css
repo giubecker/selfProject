@@ -1,0 +1,28 @@
+.achievements-cards{
+    text-align: center;
+ 
+ }
+ 
+ .card {
+     padding: 1rem;
+     border-radius: 1rem;
+     width: 50px;
+     height: 75px;
+     background: var(--color-secundary-add);
+     margin: 0.5rem;
+ }
+ .row {
+    display: flex;
+  }
+  
+  .column-1{
+    flex: 70%;
+
+    justify-items: center;
+  }
+
+  .column-2{
+    flex: 30%;
+
+    justify-items: center;
+  }

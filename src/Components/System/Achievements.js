@@ -1,5 +1,4 @@
 import React from "react";
-import Toolbar from "../System/Toolbar";
 import Sidebar from "../System/Sidebar";
 import "./Achievements.css";
 
@@ -11,11 +10,36 @@ export const Achievements = () => {
         <div className="box">
           <p>CONQUISTAS</p>
           <br />
-          AMOR
-          <br />
-          CONQUISTAS
-          <br />
-          AMOR
+          <div class="row">
+  <div class="column">
+  
+  <div className='row'>
+    <div className='card'>
+      Teste
+    </div>
+    <div className='card'>
+      Teste
+    </div>
+    <div className='card'>
+      Teste
+    </div>
+    
+  </div>
+  <div className='row'>
+    <div className='card'>
+      Teste
+    </div>
+    <div className='card'>
+      Teste
+    </div>
+    <div className='card'>
+      Teste
+    </div>
+    
+  </div>
+  </div>
+  <div class="column">Teste</div>
+</div>
         </div>
       </div>
     </>

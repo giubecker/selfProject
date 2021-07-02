@@ -38,19 +38,21 @@ export const Doubts = () => {
       <div className="container">
         <div className="box">
           <p>DÚVIDAS FREQUENTES</p>
+          <br/>
           <div className="system-container">
-            <div className="row">
+            <div className="column">
               {doubts.map((doubt, index) => (
                 <div key={index} className="doubts-container">
                   <Accordion>
                     <AccordionTab header={doubt.pergunta}>
-                      <a>{doubt.resposta}</a>
+                      <h5>{doubt.resposta}</h5>
                     </AccordionTab>
                   </Accordion>
                 </div>
               ))}
-              <div className="row">
-                <h4>Não encontrou sua dúvida? Fale conosco</h4>
+              <div className="column">
+              <br/>
+                <h5>Não encontrou sua dúvida? Fale conosco</h5>
                 <form onSubmit={onSubmit}>
                   <div>
                     <div>

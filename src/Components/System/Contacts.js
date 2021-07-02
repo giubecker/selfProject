@@ -44,14 +44,29 @@ export const Contacts = () => {
           <p>EQUIPE & MÉDICOS</p>
           <br />
           <div className="contact-cards">
-            <div className="col1">
-              {contacts.map((contact, index) => (
+         
+
+
+              <div class="row">
+  <div class="column">     {contacts.map((contact, index) => (
+                <div className="card" onClick=''>
+                  {" "}
+                  {contact.name}
+                  <br /> {contact.ocupation} <br /> {contact.phone}
+                  
+                </div>
+                
+              ))}
+              
+              </div>
+  <div class="column">     {contacts.map((contact, index) => (
                 <div className="card">
                   {" "}
                   {contact.name}
                   <br /> {contact.ocupation} <br /> {contact.phone}
                 </div>
-              ))}
+              ))}</div>
+
             </div>
           </div>
           {/* <form onSubmit={onSubmit}>

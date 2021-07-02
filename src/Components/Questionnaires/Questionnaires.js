@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../System/Sidebar";
 import "./Questionnaires.css";
+import axios from "axios";
 import Modal from "../System/Modal";
 import Questionnaire from "./Questionnaire";
 
 export const Questionnaires = () => {
+
+
   const [isOpen, setIsOpen] = useState(false);
+  const [questionnaires, setQuestionnaires] = useState([]);
+  const [answereds, setAnswereds] = useState([]);
   // const [modalQuestionnaire, setModalQuestionnaire] = React.useState();
 
+  useEffect(() => {
+    axios.get("http://localhost:9002/questionnaires").then((response) => {
+      setQuestionnaires(response.data);
+      console.log(response.data);
+    });
+
+    axios.get("http://localhost:9002/answereds").then((response) => {
+      setAnswereds(response.data);
+      console.log(response.data);
+    });
+  }, []);
   const title = [];
 
   return (
@@ -19,17 +35,23 @@ export const Questionnaires = () => {
           <p>QUESTIONÁRIOS</p>
           <br />
           <h1>Questionários para responder:</h1>
-          <Link to="/contacts">
-            <button className="questionnaire-button">Questionário 01</button>
+{questionnaires.map((questionnaire)=> (
+<div key={questionnaire.id}>
+<Link to="/contacts">
+            <button className="questionnaire-button">{questionnaire.title}</button>
           </Link>
-          <Link to="/questionnaire/1">
-            <button className="questionnaire-button">Questionário 02</button>
-          </Link>
+</div>
+))}
           <br />
           <br />
           <h1>Questionários respondidos:</h1>
-          <button className="questionnaire-button">Questionário 01</button>
-          <button className="questionnaire-button">Questionário 02</button>
+          {answereds.map((answered)=> (
+<div key={answered.id}>
+<Link to='/answereds'>
+            <button className="questionnaire-button">{answered.title}</button>
+          </Link>
+</div>
+))}
         </div>
       </div>
     </>

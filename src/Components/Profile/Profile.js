@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../System/Sidebar";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Profile.css";
 
@@ -8,7 +9,7 @@ export const Profile = () => {
   useEffect(() => {
     axios.get("http://localhost:9002/profiles").then((response) => {
       setProfiles(response.data);
-      //console.log(response.data);
+      console.log(response.data);
     });
   }, []);
 
@@ -19,23 +20,30 @@ export const Profile = () => {
         <div className="box">
           <p>MEU PERFIL</p>
           <br />
-          <div className="profile-info">
-            <h2>Pessoal</h2>
-            <h3>Nome:</h3>
-            <br />
-            <h3>Idade:</h3>
-            <br />
-            <h2>Contato</h2>
-            <h3>Telefone:</h3>
-            <h3>E-mail:</h3>
-            <h2>Outros</h2>
-            <h3>Contato de Emergência:</h3>
-            <h3>Telefone:</h3>
-            <h3>Tipo Sanguíneo:</h3>
-            <h3>Medicamentos:</h3>
+       
+{profiles.map((profile) => (
+  <div className="profile-info">
+            <h4>Pessoal</h4>
+            <h5>Nome Completo: {profile.nome}</h5>
+            <h5>Idade: {profile.idade}</h5>
+            <h4>Contato</h4>
+            <h5>Telefone: {profile.telefone}</h5>
+            <h5>E-mail: {profile.email}</h5>
+            <h5>Endereço: {profile.end}</h5>
+            <h5>CEP: {profile.cep}</h5>
+            <h4>Outros</h4>
+            <h5>Contato de Emergência: {profile.contatoEmergencia}</h5>
+            <h5>Telefone: {profile.telefoneEmergencia}</h5>
+            <h5>Tipo Sanguíneo: {profile.tipoSanguineo}</h5>
+            <h5>Medicamentos: {profile.medicamentos}</h5>
           </div>
+))}
           <br />
-          <button className="button">Editar Perfil</button>
+          <Link to="/editprofile">
+                {" "}
+                <button className="button">Editar Perfil</button>
+              </Link>{" "}
+         
         </div>
       </div>
     </>

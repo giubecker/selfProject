@@ -24,7 +24,7 @@ export const Scheduling = () => {
           <br />
           <h1>Meus agendamentos</h1>
           {schedules.map((schedule, index) => (
-            <Link key={schedule.id} to="/scheduling/schedule/1">
+            <Link key={schedule.id} to="/scheduling/scheduled/1">
               <button className="questionnaire-button">
                 <div className="dateTime">{schedule.horário}</div>
                 <div className="detalhes">{schedule.observações}</div>

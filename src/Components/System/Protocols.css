@@ -3,3 +3,20 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  a :hover{
+    text-decoration: none;
+    color: #6842C2;
+  }
+
+  .meu-protocolo{
+    text-justify: initial;
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
