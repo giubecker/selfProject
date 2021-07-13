@@ -1,26 +1,25 @@
 import React from "react";
 import "./Alerts.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const ExitAlert = () => {
-  const history = useHistory();
+export const DeleteAlert = () => {
   return (
     <>
       <div className="container-alert">
         <div className="box-alert">
-          <p>Deseja sair?</p>
+          <p>Deletar Agendamento?</p>
           <br />
           <div class="row buttons-area">
-            <Link to="/login">
+            <Link to="/scheduling">
               <button className="alerts-button">Sim </button>
             </Link>
-            <button className="alerts-button" onClick={() => history.goBack()}>
-              Não{" "}
-            </button>
+            <Link to="/scheduling">
+              <button className="alerts-button">Não </button>
+            </Link>
           </div>
         </div>
       </div>
     </>
   );
 };
-export default ExitAlert;
+export default DeleteAlert;

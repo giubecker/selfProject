@@ -1,284 +1,155 @@
 {
-  "questions": [
-    {
-      "id": 1,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você é ansioso?",
-      "isRequired": true
-    },
-    {
-      "id": 2,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você frequentemente se sente irritado ou zangado?",
-      "isRequired": true
-    },
-    {
-      "id": 3,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Tem insônia ou diFculdade para dormir?",
-      "isRequired": true
-    },
-    {
-      "id": 4,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Acha sua vida monótona, sem graça?",
-      "isRequired": true
-    },
-    {
-      "id": 5,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você Fca remoendo acontecimentos do passados e buscando explicações?",
-      "isRequired": true
-    },
-    {
-      "id": 6,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você guarda rancor?",
-      "isRequired": true
-    },
-    {
-      "id": 7,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Sua persistência com seus objetivos está prejudicada?",
-      "isRequired": true
-    },
-    {
-      "id": 8,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você sente que seu maior prazer é a comida?",
-      "isRequired": true
-    },
-    {
-      "id": 9,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você sente diFculdade nos seus relacionamentos proFssionais, amorosos ou familiares?",
-      "isRequired": true
-    },
-    {
-      "id": 10,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você possui a tendência de procrastinar, costuma deixar para amanhã?",
-      "isRequired": true
-    },
-    {
-      "id": 11,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você tem uma estima baixa?",
-      "isRequired": true
-    },
-    {
-      "id": 12,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você frequentemente sente que não fazo suFciente ou não tem os recursos necessários para se dar bem?",
-      "isRequired": true
-    },
-    {
-      "id": 13,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você tem diFculdade para manter hábitos saudáveis?",
-      "isRequired": true
-    },
-    {
-      "id": 14,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você tem se sentido desmotivado?",
-      "isRequired": true
-    },
-    {
-      "id": 15,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você tem uma estima baixa?",
-      "isRequired": true
-    },
-    {
-      "id": 16,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você é impulsivo?",
-      "isRequired": true
-    },
-    {
-      "id": 17,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Com frequência sente medo, tristeza, apatia ou culpa?",
-      "isRequired": true
-    },
-    {
-      "id": 18,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você sente diFculdade para relaxar?",
-      "isRequired": true
-    },
-    {
-      "id": 19,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você se preocupa muito e com facilidade?",
-      "isRequired": true
-    },
-    {
-      "id": 20,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você se sente perdido com relação aos seus objetivos de vida?",
-      "isRequired": true
-    },
-    {
-      "id": 21,
-      "type": "radio",
-      "title": "Questionário de Saúde Mental",
-      "questionnaireId": 1,
-      "question": "Você tem diFculdade de persistir nos seus objetivos?",
-      "isRequired": true
-    }
-  ],
-  "formQuestions": [
-    {
-      "id": 1,
-      "title": "Quantas refeições você costuma fazer por dia? Contabilizar Snacks",
-      "questionnaireId": 2
-    },
-    {
-      "id": 2,
-      "title": "Cite 10 alimentos que você imagina que sejam os mais consumidos na sua rotina",
-      "questionnaireId": 2
-    },
-    {
-      "id": 3,
-      "title": "Cite seus 10 alimentos preferidos",
-      "questionnaireId": 2
-    },
-    {
-      "id": 4,
-      "title": "Quantas refeições você costuma fazer por dia? Contabilizar Snacks.",
-      "questionnaireId": 2
-    },
-    {
-      "id": 5,
-      "title": "Possui alguma alergia alimentar? ",
-      "questionnaireId": 2
-    },
-    {
-      "id": 6,
-      "title": "Que alimentos não consegue comer?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 7,
-      "title": "Com que frequência ingere bebidas alcoólicas? Se sim, quais que mais consome?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 8,
-      "title": "Quais gorduras costuma usar para cozinhar?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 9,
-      "title": "Quanto tempo consegue !car em jejum sem sentir fome?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 10,
-      "title": "Com que frequência e evacua? - Costumas ter alguma ter alguma di!culdade no banheiro? - Cite",
-      "questionnaireId": 2
-    },
-    {
-      "id": 11,
-      "title": "Algum alimento ou grupo alimentar lhe causa diarreia após consumido?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 12,
-      "title": "Algum alimento ou grupo alimentar lhe causa diarreia após consumido?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 13,
-      "title": "Jejum - Qual foi o maior período de jejum que já cumpriu?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 14,
-      "title": "Jejum - Qual costuma ser o intervalo entre suas refeições?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 15,
-      "title": "Jejum - Que sintomas experimenta durante o jejum?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 16,
-      "title": "Jejum - Quanto tempo antes de deitar faz sua última refeição?",
-      "questionnaireId": 2
-    },
-    {
-      "id": 17,
-      "title": "Jejum - Quanto tempo após acordar faz sua primeira refeição?",
-      "questionnaireId": 2
-    }
-  ],
   "questionnaires": [
     {
       "id": 1,
       "title": "Questionário de Saúde Mental",
-      "questionsQuantity": 21
+      "questionsQuantity": 7,
+      "instuctions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "questions": [
+        {
+          "id": 1,
+          "type": 0,
+          "text": true,
+          "title": "Quantas refeições você costuma fazer por dia? Contabilizar Snacks",
+          "questionnaireId": 2
+        },
+        {
+          "id": 2,
+          "text": true,
+          "type": "text",
+          "title": "Cite 10 alimentos que você imagina que sejam os mais consumidos na sua rotina"
+        },
+        {
+          "id": 3,
+          "type": "text",
+          "text": true,
+          "title": "Cite seus 10 alimentos preferidos"
+        },
+        {
+          "id": 4,
+          "type": "radio",
+          "text": false,
+          "title": "Acha sua vida monótona, sem graça?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 5,
+          "type": "radio",
+          "text": false,
+          "title": "Você Fica remoendo acontecimentos do passados e buscando explicações?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 6,
+          "type": "radio",
+          "text": false,
+          "title": "Você guarda rancor?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 7,
+          "type": "radio",
+          "text": false,
+          "title": "Sua persistência com seus objetivos está prejudicada?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        }
+      ]
     },
     {
       "id": 2,
       "title": "Questionário de Avaliação Inicial",
-      "questionsQuantity": 21
+      "instuctions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "questionsQuantity": 6,
+      "questions": [
+        {
+          "id": 1,
+          "title": "Questionário de Saúde Mental",
+          "text": false,
+          "question": "Você é impulsivo?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 2,
+          "text": false,
+          "title": "Questionário de Saúde Mental",
+          "question": "Com frequência sente medo, tristeza, apatia ou culpa?"
+        },
+        {
+          "id": 3,
+          "text": false,
+          "title": "Questionário de Saúde Mental",
+          "question": "Você sente dificuldade para relaxar?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 4,
+          "text": false,
+          "title": "Questionário de Saúde Mental",
+          "question": "Você se preocupa muito e com facilidade?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 5,
+          "text": false,
+          "title": "Questionário de Saúde Mental",
+          "question": "Você se sente perdido com relação aos seus objetivos de vida?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        },
+        {
+          "id": 6,
+          "text": false,
+          "title": "Questionário de Saúde Mental",
+          "question": "Você tem dificuldade de persistir nos seus objetivos?",
+          "option": [
+            "sim",
+            "não"
+          ]
+        }
+      ]
     }
   ],
-
   "answereds": [
     {
       "id": 1,
-      "title": "Questionário de Saúde Mental",
-      "questionsQuantity": 21
+      "title": "Questionário de Saúde Mental 2",
+      "questionsQuantity": 21,
+      "status": "avaliado",
+      "points": 40,
+      "corrected": true,
+      "observation": "A sua pontuação mostra uma tendência a elevada a ter colesterol...."
     },
     {
       "id": 2,
-      "title": "Questionário de Avaliação Inicial",
-      "questionsQuantity": 21
+      "title": "Questionário de Avaliação Inicial 2",
+      "questionsQuantity": 21,
+      "status": "aguardando avaliação",
+      "pontuação": "-",
+      "corrected": false,
+      "resultado": "A sua pontuação mostra uma tendência a elevada a ter colesterol...."
     }
   ],
   "recipes": [
@@ -291,10 +162,10 @@
   "doubts": [
     {
       "id": 1,
-      "pergunta": "Primeira Pergunta"
+      "pergunta": "Dúvida teste"
     },
     {
-      "pergunta": "Olá tenho uma dúvida",
+      "pergunta": "s",
       "id": 2
     }
   ],
@@ -313,26 +184,6 @@
       "id": 3,
       "pergunta": "Terceira Pergunta",
       "resposta": "After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate."
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "Carlão",
-      "username": "carlos",
-      "password": "password"
-    },
-    {
-      "id": 2,
-      "name": "Giuliano",
-      "username": "giubohn",
-      "password": "password"
-    },
-    {
-      "id": 3,
-      "name": "Beatriz",
-      "username": "betabohn",
-      "password": "password"
     }
   ],
   "scheduling": [
@@ -390,106 +241,149 @@
       "answer": 1
     }
   ],
-  "time": [
-    "8:00",
-    "9:00",
-    "10:00",
-    "11:00",
-    "13:00",
-    "14:00",
-    "15:00",
-    "16:00",
-    "17:00"
-  ],
-  "date": [
-    "Segunda-feira",
-    "Terça-feira",
-    "Quarta-feira",
-    "Quinta-feira",
-    "Sexta-feira"
-  ],
-  "ideas": [
-    {
-      "title": "First idea",
-      "premises": [
-        "Premise one",
-        "Premise two"
-      ],
-      "conclusion": "Example conclusion"
-    },
-    {
-      "title": "Second idea",
-      "premises": [
-        "Premise one",
-        "Premise two"
-      ],
-      "conclusion": "Example conclusion"
-    },
-    {
-      "title": "Third idea",
-      "premises": [
-        "Premise one",
-        "Premise two"
-      ],
-      "conclusion": "Example conclusion"
-    }
-  ],
   "contacts": [
     {
       "id": 1,
-      "name": "Giuliano",
+      "name": "Giuliano Bohn Benedeti",
       "ocupation": "Engenheiro da Computação",
+      "image": "https://i.ibb.co/VvHM4L2/contacts-00.jpg",
       "phone": "(55) 9 99236666",
-      "email": "giubohn@hotmail.com"
+      "email": "giubohn@hotmail.com",
+      "observation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 1,
-      "name": "William",
-      "ocupation": "Médico",
-      "phone": "(55) 9 99236666",
-      "email": "giubohn@hotmail.com"
+      "id": 2,
+      "name": "William Rutzen",
+      "ocupation": "Médico Intensivista",
+      "image": "https://i.ibb.co/VvHM4L2/contacts-00.jpg",
+      "phone": "(55) 9 91238726",
+      "email": "giubohn@hotmail.com",
+      "observation": ""
     },
     {
-      "id": 1,
-      "name": "Cassiana",
+      "id": 3,
+      "name": "Cassiana Fleck",
       "ocupation": "Arquiteta",
-      "phone": "(55) 9 99236666",
-      "email": "giubohn@hotmail.com"
+      "image": "https://i.ibb.co/VvHM4L2/contacts-00.jpg",
+      "phone": "(55) 9 97980010",
+      "email": "giubohn@hotmail.com",
+      "observation": ""
+    },
+    {
+      "id": 4,
+      "name": "Beatriz Teresinha Bohn",
+      "ocupation": "Aposentada",
+      "image": "https://i.ibb.co/VvHM4L2/contacts-00.jpg",
+      "phone": "(55) 9 96696119",
+      "email": "beatbohn@hotmail.com",
+      "observation": ""
+    }
+  ],
+  "achievements": [
+    {
+      "id": 0,
+      "level": "Expert",
+      "points": 1000,
+      "medals": [
+        {
+          "id": 0,
+          "icon": "read",
+          "stars": 1,
+          "title": "Leitura",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "tip": "Consiga 3 estrelas para desbloquear o troféu"
+        },
+        {
+          "id": 1,
+          "icon": "cook",
+          "stars": 2,
+          "title": "Cozinha Saudável",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "tip": "Consiga 3 estrelas para desbloquear o troféu"
+        },
+        {
+          "id": 2,
+          "icon": "schedule",
+          "stars": 2,
+          "title": "Agendamento",
+          "description": "Medalha obtida através da realização de agendamento com sucesso",
+          "tip": "Consiga 3 estrelas para desbloquear o troféu"
+        }
+      ],
+      "trophies": [
+        {
+          "id": 3,
+          "type": 1,
+          "stars": 0,
+          "title": "Questionário",
+          "description": "Parabéns! Troféu conquistado por você ter respondido a três questionários completos"
+        },
+        {
+          "id": 4,
+          "stars": 0,
+          "title": "Vídeo",
+          "description": "Muito bem! Troféu conquistado por você ter assistido a três vídeos dos materiais didáticos"
+        }
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "id": 0,
+      "position": "1º",
+      "name": "Beatriz Teresinha Bohn",
+      "points": "600"
     },
     {
       "id": 1,
-      "name": "Beatriz",
-      "ocupation": "Aposentada",
-      "phone": "(55) 9 99236666",
-      "email": "giubohn@hotmail.com"
+      "position": "2º",
+      "name": "Giuliano Bohn Bendeti",
+      "points": "400"
+    },
+    {
+      "id": 2,
+      "position": "3º",
+      "name": "William Rutzen",
+      "points": "250"
     }
   ],
   "profiles": [
     {
       "id": 1,
-      "nome": "Giuliano Bohn",
-      "idade": "28 anos",
-      "telefone": "(55) 99923-6666",
+      "name": "Giuliano Bohn",
+      "age": "28 anos",
+      "phone": "(55) 99923-6666",
       "email": "giubohn@hotmail.com",
-      "end": "Avenida Avaí 465",
-      "cep": "98910-000",
-      "contatoEmergencia": "Beatriz Bohn",
-      "telefoneEmergencia": "(55) 99669-6119",
-      "tipoSanguineo": "A+",
-      "medicamentos": "Clonazepan"
+      "adress": "Avenida Avaí 465",
+      "zipCode": "98910-000",
+      "emergencyContact": "Beatriz Bohn",
+      "emergencyPhone": "(55) 99669-6119",
+      "bloodType": "A+",
+      "drugs": "Clonazepan",
+      "notes": "Apresento problemas de sinusite e faço uso contínuo de medicamento corticoide"
     }
   ],
-  "answer": [
+  "answeredQuestionnaires": [
     {
-      "id": 1,
-      "body": "some other comment",
-      "postId": 1
+      "Quantas refeições você costuma fazer por dia? Contabilizar Snacks": "4",
+      "Cite 10 alimentos que você imagina que sejam os mais consumidos na sua rotina": "3",
+      "Cite seus 10 alimentos preferidos": "2",
+      "Acha sua vida monótona, sem graça?": "não",
+      "Você Fca remoendo acontecimentos do passados e buscando explicações?": "não",
+      "Você guarda rancor?": "não",
+      "Questionário de Saúde Mental": "não",
+      "id": 0
     },
-    [],
-    [],
-    [],
-    [],
-    []
+    {
+      "Quantas refeições você costuma fazer por dia? Contabilizar Snacks": "teste dh",
+      "Cite 10 alimentos que você imagina que sejam os mais consumidos na sua rotina": "teste dh",
+      "Cite seus 10 alimentos preferidos": "teste  dh",
+      "Acha sua vida monótona, sem graça?": "não",
+      "Você Fica remoendo acontecimentos do passados e buscando explicações?": "não",
+      "Você guarda rancor?": "não",
+      "Sua persistência com seus objetivos está prejudicada?": "não",
+      "id": 1
+    }
   ],
   "agendamentos": [
     {
@@ -563,54 +457,239 @@
       "available": true
     }
   ],
-  "exames": [
+  "exams": [
     {
       "id": 1,
-      "titulo": "Vitamina D",
-      "descricao": "O exame de vitamina D, também conhecido como exame de hidroxivitamina D ou 25(OH)D, tem como objetivo verificar a concentração de vitamina D no ...",
-      "imagem": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alura.com.br%2Fartigos%2Fvisualizando-informacoes-com-um-grafico&psig=AOvVaw1M5kKyOLErYmxBk1ow_gyq&ust=1625191763032000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCLjZ5KLlwPECFQAAAAAdAAAAABAD",
-      "link": "https://drive.google.com/file/d/1cj5NjdrIwXFcScgqTZehjatLnSllgt0A/view?usp=sharing"
+      "title": "Vitamina D",
+      "description": "O exame de vitamina D, também conhecido como exame de hidroxivitamina D ou 25(OH)D, tem como objetivo verificar a concentração de vitamina D no ...",
+      "link": "https://drive.google.com/file/d/1cj5NjdrIwXFcScgqTZehjatLnSllgt0A/view?usp=sharing",
+      "label": "nível de vitamina D",
+      "labels": [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio"
+      ],
+      "data": [
+        32,
+        42,
+        12,
+        69,
+        34
+      ],
+      "status": "Regular"
+    },
+    {
+      "id": 1,
+      "title": "Vitamina D",
+      "description": "O exame de vitamina D, também conhecido como exame de hidroxivitamina D ou 25(OH)D, tem como objetivo verificar a concentração de vitamina D no ...",
+      "link": "https://drive.google.com/file/d/1cj5NjdrIwXFcScgqTZehjatLnSllgt0A/view?usp=sharing",
+      "label": "nível de vitamina D",
+      "labels": [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio"
+      ],
+      "data": [
+        32,
+        42,
+        12,
+        69,
+        34
+      ],
+      "status": "Regular"
+    },
+    {
+      "id": 1,
+      "title": "Vitamina D",
+      "description": "O exame de vitamina D, também conhecido como exame de hidroxivitamina D ou 25(OH)D, tem como objetivo verificar a concentração de vitamina D no ...",
+      "link": "https://drive.google.com/file/d/1cj5NjdrIwXFcScgqTZehjatLnSllgt0A/view?usp=sharing",
+      "label": "nível de vitamina D",
+      "labels": [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio"
+      ],
+      "data": [
+        32,
+        42,
+        12,
+        69,
+        34
+      ],
+      "status": "Regular"
     }
   ],
-  "reservados": [
+  "reserved": [
     {
       "id": 1,
-      "tipo": "urgencia",
-      "horário": "Sexta-feira, 7 de maio de 2021. 8:00",
-      "observações": "nada"
+      "type": "urgencia",
+      "date": "Sexta-feira, 7 de maio de 2021. 8:00",
+      "notes": "nada"
     },
     {
-      "tipo": "urgencia",
-      "horário": "Terça-feira, 4 de maio de 2021. 11:00",
-      "observações": "teste6",
-      "id": 11
+      "id": 2,
+      "type": "urgencia",
+      "date": "Terça-feira, 4 de maio de 2021. 11:00",
+      "notes": "teste6"
     },
     {
-      "tipo": "urgencia",
-      "horário": "Quarta-feira, 5 de maio de 2021. 8:00",
-      "observações": "teste7",
-      "id": 12
+      "id": 3,
+      "type": "urgencia",
+      "date": "Quarta-feira, 5 de maio de 2021. 8:00",
+      "notes": "teste7"
     },
     {
-      "tipo": "urgencia",
-      "horário": "Quarta-feira, 5 de maio de 2021. 8:00",
-      "observações": "teste7",
-      "id": 13
+      "id": 4,
+      "type": "urgencia",
+      "date": "Quarta-feira, 5 de maio de 2021. 8:00",
+      "notes": "teste7"
     },
     {
-      "tipo": "urgencia",
-      "horário": "Quarta-feira, 5 de maio de 2021. 8:00",
-      "observações": "teste7",
-      "id": 14
+      "id": 5,
+      "type": "urgencia",
+      "date": "Quarta-feira, 5 de maio de 2021. 8:00",
+      "notes": "teste7"
     },
     {
-      "observações": "no limite",
-      "tipo": "Urgência",
-      "id": 16
-    },
-    {
-      "observações": "teste",
-      "id": 17
+      "date": "Terça-feira, 4 de maio de 2021. 8:00",
+      "notes": "ddddd",
+      "id": 6
     }
-  ]
+  ],
+  "notifications": [
+    {
+      "id": 0,
+      "icon": 1,
+      "note": "O gráfico do seu exame foi atualizad",
+      "link": "/exams"
+    },
+    {
+      "id": 1,
+      "icon": 1,
+      "note": "O gráfico do seu exame foi atualizado",
+      "link": "/exams"
+    },
+    {
+      "id": 2,
+      "icon": 2,
+      "note": "Parabens, você conseguiu uma nova medalha",
+      "link": "/achievements"
+    }
+  ],
+  "library": [
+    {
+      "id": 0,
+      "title": "6 dicas para ter uma vida saudável e garantir a longevidade",
+      "type": "video",
+      "video": true,
+      "description": "Se você está vendo esse vídeo é porque temos algo em comum: buscamos ter uma vida mais saudável, equilibrada e garantir a longevidade, acertei?",
+      "body": "https://www.youtube.com/embed/tgbNymZ7vqY",
+      "viewed": true,
+      "liked": false,
+      "saved": false
+    },
+    {
+      "id": 1,
+      "title": "Pizza Low Carb com massa de frango",
+      "type": "recipe",
+      "video": false,
+      "recipe": true,
+      "ingredients": [
+        "1 xícara de frango desfiado",
+        "50 gramas de queijo ralado light",
+        "3 ovos",
+        "2 colheres de sopa de azeite de oliva (16 g)",
+        "1 colher de sopa de fermento químico em pó (10 g)",
+        "óregano (à gosto)",
+        "80 gramas de molho de tomate, lata",
+        "5 colheres de sopa cheias, picado de brócolis cozido (50 g)",
+        "100 gramas de alho ( 1 dente de alho picado)",
+        "200 gramas de queijo ricota]"
+      ],
+      "prepare": [
+        "1. Coloque todos os ingredientes da massa no processador e bata até ficar homogêneo. Coloque a massa em uma forma de pizza untada com azeite forrando todo fundo. Leve ao forno pré aquecido por 10 minutos a 180 graus. Passado esse tempo, vire e doure por mais 10 minutos ou até dourar. Retire.",
+        "2. Cozinhe os brócolis no vapor, refogue numa panela com azeite e alho. Adicione ricota, temperos da preferência e deixe secar bem. Coloque o molho de tomate na massa. Despeje o recheio por cima da massa e volte ao forno por mais 10 min. Sirva."
+      ],
+      "description": "Uma receita saborosa e altamente indicada para pessoas que não consomem carboidratos",
+      "viewed": false,
+      "liked": true,
+      "saved": true
+    },
+    {
+      "id": 2,
+      "title": "Longevidade funcional",
+      "author": "Daniel Simon",
+      "type": "text",
+      "video": false,
+      "text": true,
+      "description": "Numa sociedade caracterizada pelos avanços tecnológicos que facilitam a nossa vida, o homem contemporâneo, do ponto de vista de suas funções corporais...",
+      "body": "Numa sociedade caracterizada pelos avanços tecnológicos que facilitam a nossa vida, o homem contemporâneo, do ponto de vista de suas funções corporais (levantar, sentar, caminhar, carregar, puxar, girar, empurrar, subir e descer escadas, etc...), utiliza cada vez menos suas potencialidades, e a maior parte da população é parcial ou completamente inativa. O problema a ser resolvido pelos indivíduos em processo de envelhecimento refere-se à qualidade com que serão vividos os anos que o aumento na expectativa de vida proporcionou. A manutenção das capacidades físicas é fundamental para que os indivíduos envolvidos neste processo possam viver de forma autônoma e independente pelo maior tempo possível, proporcionando dessa forma um aumento na sua longevidade funcional. Estatísticas indicam que os idosos americanos vivem uma média de 11,7 anos com incapacidades físicas crônicas que limitam as atividades cotidianas, e o cuidado com as pessoas que perderam a independência gera um custo anual aproximado de 26 bilhões de dólares aos Estados Unidos, valor este que tende a aumentar significativamente nos próximos anos, devido ao crescimento desta parcela da população. As ações preventivas deverão ser prioritárias, pois uma boa parte da perda da função física relacionada com o envelhecimento pode ser evitada, ou pelo menos reduzida, se houver maior ênfase na prática regular de exercícios físicos ao longo da vida. Para os idosos que já apresentam declínios físicos relacionados ao processo de envelhecimento, as estratégias de intervenção deverão objetivar a reabilitação ou, no mínimo, a manutenção das capacidades ainda existentes. A elaboração de um programa de exercícios físicos a ser desenvolvido pelos indivíduos idosos deverá contemplar uma combinação de treinamento aeróbio, treinamento de força e resistência musculares, de flexibilidade e de equilíbrio. Vários estudos recentes ressaltam a importância que o exercício físico desempenha no processo de incapacidade e os benefícios que sua prática proporciona nos níveis de aptidão física (equilíbrio, capacidade cardiorrespiratória, flexibilidade, força e resistência muscular), que são fundamentais para que o idoso possa conseguir realizar as atividades normais do cotidiano com segurança, independência e sem fadiga injustificada. Recentemente, um novo método de treinamento foi idealizado com o objetivo de proporcionar aos indivíduos idosos mais uma possibilidade para a prática de exercícios físicos. Os chamados parques da longevidade ou circuitos funcionais são formados por um conjunto de aparelhos dispostos ao ar livre, que reproduzem os movimentos do cotidiano, visando resgatar ou aprimorar a eficiência destes movimentos, além de a sua prática regular melhorar os níveis de vários componentes da aptidão física. Independente da idade ou do nível de fragilidade, praticamente todos os idosos submetidos a um programa regular de exercícios físicos podem obter benefícios fisiológicos e funcionais.  Somente com o uso correto das ferramentas disponíveis no momento que propiciam um bom envelhecimento, além das ações preventivas e continuadas ao longo da vida, estaremos minimizando os riscos de incapacidades que se associam a este processo.",
+      "viewed": false,
+      "liked": true,
+      "saved": false
+    },
+    {
+      "id": 3,
+      "title": "6 dicas para ter uma vida saudável e garantir a longevidade",
+      "type": "video",
+      "video": true,
+      "description": "Se você está vendo esse vídeo é porque temos algo em comum: buscamos ter uma vida mais saudável, equilibrada e garantir a longevidade, acertei?",
+      "body": "https://www.youtube.com/embed/tgbNymZ7vqY",
+      "viewed": true,
+      "liked": false,
+      "saved": false
+    }
+  ],
+  "medals": [
+    {
+      "id": 0,
+      "icon": "read",
+      "stars": 1,
+      "title": "Leitura",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "tip": "Consiga 3 estrelas para desbloquear o troféu"
+    },
+    {
+      "id": 1,
+      "icon": "cook",
+      "stars": 2,
+      "title": "Cozinha Saudável",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "tip": "Consiga 3 estrelas para desbloquear o troféu"
+    },
+    {
+      "id": 2,
+      "icon": "schedule",
+      "stars": 2,
+      "title": "Agendamento",
+      "description": "Medalha obtida através da realização de agendamento com sucesso",
+      "tip": "Consiga 3 estrelas para desbloquear o troféu"
+    }
+  ],
+  "trophies": [
+    {
+      "id": 3,
+      "type": 1,
+      "title": "Questionário",
+      "description": "Parabéns! Troféu conquistado por você ter respondido a três questionários completos"
+    },
+    {
+      "id": 4,
+      "title": "Vídeo",
+      "description": "Muito bem! Troféu conquistado por você ter assistido a três vídeos dos materiais didáticos"
+    }
+  ],
+  "home": {
+    "AchievementStars": 1,
+    "AchievementTitle": "Leitura",
+    "objective": "Conseguir amarrar os tênis",
+    "weightLoss": 50,
+    "generalProgress": 75
+  }
 }

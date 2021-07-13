@@ -25,8 +25,6 @@
 }
 
 .icon{
-    height: 2rem;
-    width: 2rem;
     padding: 0.5rem;
 }
 .library-header{ 
@@ -34,50 +32,11 @@
     justify-content: space-between; 
 }
 
-.content-icons-area{
-    display: flex;
-    flex-direction: row;
-    margin-left: 2rem;
-}
-
-.content-icon {
-    margin-right: 1rem;
-    color: gray;
-}
-
-.my-library-link a{
+.my-library-link {
     color: #3fbcb2;
-}
-
-.image-content{
-    object-fit: cover;
-    margin-top: 2rem;
-    margin: 1rem;
-    border-radius: 1rem;
-    width: 220px;
-    height: 150px;
-    background-color: tomato;
-}
-
-.content-item {
-    display: flex;
-    justify-content: center;
-      padding: 1rem;
-      border-radius: 1rem;
-      width: 250px;
-      height: 300px;
-      background:#c9f8f4;
-      margin: 2rem;
-  }
-
-  .content-description{
-      text-justify:auto;
-  }
-
-.content-title{
-    font-weight: 600;
-    font-size: 12px;
-    color: #3fbcb2;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 15px;
 }
 
 .search {

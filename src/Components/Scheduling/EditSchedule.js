@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Schedule.css";
 import { useHistory, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Error from "../Helper/Error";
 
 import axios from "axios";
 import Sidebar from "../System/Sidebar";
 
-export const Scheduled = () => {
+export const EditSchedule = () => {
   const initialValue = {
     type: "",
     date: "",
@@ -18,6 +17,8 @@ export const Scheduled = () => {
   const history = useHistory();
   const [values, setValues] = useState({});
   const [schedule, setSchedule] = useState([initialValue]);
+  const [dropdown, setDropdown] = useState("Selecione");
+  const [dates, setDates] = useState([]);
 
   function onChange(event) {
     const { name, value, id } = event.target;
@@ -27,15 +28,10 @@ export const Scheduled = () => {
 
   function onSubmit(event) {
     event.preventDefault();
-    axios.post("http://localhost:9002/reserved", values).then((response) => {
-      history.push("/scheduling");
+    axios.put("http://localhost:9002/reserved", values).then((response) => {
+      history.push(`/scheduling/scheduled/${id}`);
     });
   }
-  // function remove() {
-  //   axios.delete("http://localhost:9002/reservados/16", values).then((response) => {
-  //     history.push("/scheduling");
-  //   });
-  // }
 
   useEffect(() => {
     axios.get(`http://localhost:9002/reserved/${id}`).then((response) => {
@@ -44,15 +40,10 @@ export const Scheduled = () => {
     });
   }, []);
 
-  // console.log(acheduling);
 
-  const [dropdown, setDropdown] = useState("Selecione");
-
-  const [dates, setDates] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:9002/agendamentos").then((response) => {
       setDates(response.data);
-      //console.log(response.data);
     });
   }, []);
 
@@ -62,15 +53,36 @@ export const Scheduled = () => {
       <div className="container">
         <div className="box schedule">
           <div className="content">
-            <h1 className="title">Agendamento</h1>
+            <h1 className="title">Editar Agendamento</h1>
             <form onSubmit={onSubmit}>
               <div key={schedule.id} className="form">
                 <h2></h2>
                 <label>Tipo: &nbsp;</label>
-                {schedule.type}
-                <br />
-                <label>Horário: &nbsp;</label>
-                {schedule.date}
+                  <select
+                    className="input"
+                    name="type"
+                    value={dropdown}
+                    onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
+                  >
+                    <option value="Rotina">Rotina</option>
+                    <option value="Urgência">Urgência</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                  <br />
+                <label>Horários: &nbsp;</label>
+                <select
+                    className="input"
+                    value={dropdown}
+                    name="date"
+                    onChange={onChange}
+                  >
+                    {dates.map((date, index) => (
+                      <option value={date.dateTime} onChange={onChange}>
+                        {date.dateTime}
+                      </option>
+                    ))}
+                  </select>
+                  <br />
                 <br />
                 <label>Observações: &nbsp;</label>
                 {schedule.notes}
@@ -78,30 +90,14 @@ export const Scheduled = () => {
               </div>
               <Link to="/scheduling">
                 {" "}
-                <button className="button" type="">
-                  Voltar
+                <button className="button" type="submit">
+                  Salvar
                 </button>
               </Link>{" "}
-              <Link to={`/scheduling/scheduled/edit/${schedule.id}`}>
-                <button className="button">Editar</button>
+              <Link to={`/scheduling/scheduled/${id}`}>
+                <button className="button">Cancelar</button>
               </Link>
               <Link to="/scheduling">
-                <button
-                  className="button"
-                  type="button"
-                  onClick={() =>
-                    axios
-                      .delete(
-                        `http://localhost:9002/reservados/${schedule.id}`,
-                        values
-                      )
-                      .then((response) => {
-                        history.push("/delete");
-                      })
-                  }
-                >
-                  Deletar
-                </button>
               </Link>
             </form>
             <br />
@@ -111,4 +107,4 @@ export const Scheduled = () => {
     </>
   );
 };
-export default Scheduled;
+export default EditSchedule;

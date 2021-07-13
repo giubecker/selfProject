@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Toolbar from "../System/Toolbar";
 import Sidebar from "../System/Sidebar";
 import { Link } from "react-router-dom";
-import Schedule from "./Schedule";
 import axios from "axios";
 import "./Scheduling.css";
 
 export const Scheduling = () => {
   const [schedules, setSchedules] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:9002/reservados").then((response) => {
+    axios.get("http://localhost:9002/reserved").then((response) => {
       setSchedules(response.data);
-      //console.log(response.data);
     });
   }, []);
 
@@ -24,16 +21,16 @@ export const Scheduling = () => {
           <br />
           <h1>Meus agendamentos</h1>
           {schedules.map((schedule, index) => (
-            <Link key={schedule.id} to="/scheduling/scheduled/1">
+            <Link key={schedule.id} to={`/scheduling/scheduled/${schedule.id}`}>
               <button className="questionnaire-button">
-                <div className="dateTime">{schedule.horário}</div>
-                <div className="detalhes">{schedule.observações}</div>
+                <div className="dateTime">{schedule.date}</div>
+                <div className="detalhes">{schedule.notes}</div>
               </button>
             </Link>
           ))}
           <br />
           <br />
-          <Link to="/scheduling/schedule/3">
+          <Link to="/scheduling/new">
             <button className="questionnaire-button">NOVO AGENDAMENTO</button>
           </Link>
         </div>

@@ -1,0 +1,50 @@
+.contacts {
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    overflow: auto;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2.6rem;
+    flex: 50%;
+    justify-items: center;
+}
+
+.contact-cards{
+   text-align: center;
+
+}
+
+.card {
+    padding: 1rem;
+    font-size: 13px;
+    color: gray;
+    border-radius: 1rem;
+    width: 300px;
+    height: 150px;
+    background: #b7f1ed;
+    margin: 1rem;
+}
+
+.image{
+    width: 100px;
+    border-radius: 1rem;
+}
+
+.contacts-row {
+  margin-left: 0rem;
+    display: flex;  
+  }
+  
+  .card-column1{
+    flex: 30%;
+    justify-items: center;
+  }
+
+  .card-column2{
+    margin-top: 2.5rem;
+    padding-left: 1rem;
+    flex: 70%;
+    justify-items: center;
+    text-align: start;  
+}

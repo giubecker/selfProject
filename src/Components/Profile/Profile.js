@@ -5,10 +5,10 @@ import axios from "axios";
 import "./Profile.css";
 
 export const Profile = () => {
-  const [profiles, setProfiles] = useState([]);
+  const [profile, setProfile] = useState({});
   useEffect(() => {
-    axios.get("http://localhost:9002/profiles").then((response) => {
-      setProfiles(response.data);
+    axios.get("http://localhost:9002/profiles/1").then((response) => {
+      setProfile(response.data);
       console.log(response.data);
     });
   }, []);
@@ -21,7 +21,7 @@ export const Profile = () => {
           <p>MEU PERFIL</p>
           <br />
        
-{profiles.map((profile) => (
+
   <div className="profile-info">
             <h4>Pessoal</h4>
             <h5>Nome Completo: {profile.nome}</h5>
@@ -36,10 +36,10 @@ export const Profile = () => {
             <h5>Telefone: {profile.telefoneEmergencia}</h5>
             <h5>Tipo Sanguíneo: {profile.tipoSanguineo}</h5>
             <h5>Medicamentos: {profile.medicamentos}</h5>
+            <h5>Observações: {profile.notes}</h5>
           </div>
-))}
           <br />
-          <Link to="/editprofile">
+          <Link to="/editprofile/1">
                 {" "}
                 <button className="button">Editar Perfil</button>
               </Link>{" "}

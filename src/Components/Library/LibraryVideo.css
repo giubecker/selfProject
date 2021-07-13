@@ -1,0 +1,42 @@
+.video-area{
+    justify-content: center;
+    
+}
+
+.video-content{
+    border-radius: 1rem;
+    border-color: transparent;
+}
+
+.icons-area{
+    padding-left: 5rem;
+    justify-content: space-evenly;
+}
+
+.back-button{
+    border-color: transparent;
+    background-color: transparent;
+    
+}
+
+.action-icon{
+    padding: 0.5rem;
+    color: rgb(71, 71, 71);
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.video-title{
+    width: 300px;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    font-size: 12px;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.video-description {
+    padding-top: 1rem;
+    padding-right: 3rem;
+    padding-left: 2rem;
+}

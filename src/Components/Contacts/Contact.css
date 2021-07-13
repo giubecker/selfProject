@@ -1,0 +1,28 @@
+.singlecard {
+  padding: 2.5rem;
+  font-size: 13px;
+  color: gray;
+  border-radius: 1rem;
+  width: 500px;
+  height: 250px;
+  background: #b7f1ed;
+  margin: 1rem;
+  margin-left: 9rem;
+}
+
+.contact-image {
+  width: 100px;
+  border-radius: 1rem;
+}
+
+.contact-card-column1 {
+  flex: 30%;
+  justify-items: center;
+}
+
+.contact-card-column2 {
+  padding-top: 0rem;
+  padding-left: 1rem;
+  flex: 70%;
+  text-align: start;
+}

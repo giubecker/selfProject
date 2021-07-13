@@ -2,15 +2,15 @@ import React from "react";
 import "./Alerts.css";
 import { Link } from "react-router-dom";
 
-export const SuccessAlert = () => {
+export const SuccessQuestionnaire = () => {
   return (
     <>
       <div className="container-alert">
         <div className="box-alert">
-          <p>Agendado com sucesso!</p>
+          <p>Questionário respondido com sucesso!</p>
           <br />
           <div className="row buttons-area">
-          <Link to="/scheduling">
+          <Link to="/questionnaires">
             <button className="alerts-button">Ok </button>
           </Link>
         </div>
@@ -19,4 +19,4 @@ export const SuccessAlert = () => {
     </>
   );
 };
-export default SuccessAlert;
+export default SuccessQuestionnaire;

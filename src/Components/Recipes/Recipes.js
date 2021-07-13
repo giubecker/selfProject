@@ -1,5 +1,4 @@
 import React from "react";
-import Toolbar from "../System/Toolbar";
 import Sidebar from "../System/Sidebar";
 import { Link } from "react-router-dom";
 import "./Recipes.css";
