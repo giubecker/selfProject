@@ -6,14 +6,31 @@
   --color-background-secundary: #dfeaf4;
   --color-font-primary: #FFFFFF;
   --color-primary-lighter: #8bd8cd;
+  --color-primary-light: #916BEA;
+  --color-primary: #8257E5;
+  --color-primary-dark: #774DD6;
+  --color-primary-darker: #6842C2;
   --color-secundary: #5ba39d;
   --color-secundary-add: #9ee4de;
   --color-secundary-dark: #468b86;
   --color-secundary-dark-add: #7bc4be;
   --color-title-in-primary: #FFFFFF;
+  --color-text-in-primary: #D4C2FF;
+  --color-text-title-lighter: #ffffff;
+  --color-text-title-darker: #3fbcb2;
+  --color-text-complement: #9C98A6;
+  --color-text-complement-grey: #686868;
+  --color-text-base: #6A6180;
+  --color-line-in-white: #E6E6F0;
+  --color-input-background: #F8F8FC;
+  --color-button-text: #FFFFFF;
+  --color-box-base: #FFFFFF;
+  --color-box-secondary: #4ec4b9;
+  --color-box-footer: #FAFAFC;
+  --color-primary-button: #3fbcb2;
+  --color-secondary-button: #31938e;
   text-decoration: none important!;
 }
-
 * {
 
   padding: 0rem;
@@ -34,6 +51,7 @@ body {
   background-color: #5fdbd1;
   margin: 0px;
   color: #333;
+  text-decoration: none;
   --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
 }
@@ -44,10 +62,12 @@ h3,
 h4,
 p{
   margin: 0px;
+  text-decoration: none;
 }
 
 .box p{
   font-size: large;
+  text-decoration: none;
 }
 
 ul,
@@ -67,15 +87,18 @@ a {
   width: 100vw;
   height: 100vh;
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   align-items: center
   }
   .box {
-  margin-top: -20px;
-  width: 50%;
+  margin-top: -40px;
+  width: 60%;
   height:max-content;
+  text-decoration: none;
   background: #fff;
   border-radius: 40px;
+  z-index: 1000;
   }
 
   .container .box {
@@ -84,6 +107,27 @@ a {
   
   body {
   margin: 0px;
+  text-decoration: none;
+  }
+
+  .button {
+    width: 13rem;
+    height: 4.6rem;
+    background: var(--color-primary-button);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    text-decoration: none important!;
+    margin: 1rem;
+    }
+      
+.button:hover {
+    transition: color 400ms;
+    background: var(--color-secondary-button);
   }
 
   .animeUp {
@@ -92,13 +136,10 @@ a {
     animation: animeUp 0.3s forwards;
   }
 
-  .title {
-
-  }
-
   @keyframes animeUp {
     to {
       opacity: 1;
       transform: initial;
     }
   }
+

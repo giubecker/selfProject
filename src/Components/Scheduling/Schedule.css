@@ -1,0 +1,61 @@
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    z-index: 1000;
+    padding: 2rem calc(4rem + 15px) 2rem 4rem;
+    justify-content: center;
+  }
+
+  .schedule {
+    align-content: center;
+  }
+
+  .form{
+
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .options {
+    text-align: center;
+    padding: 1rem;
+    padding-left: 5rem;
+  }
+
+  .content {
+      padding: 5rem;
+      overflow:scroll; 
+  }
+
+  .single-schedule{
+    overflow:scroll; 
+    min-width: 300px;
+    max-height: 300px;
+    margin-left: 25rem;
+    margin-right: 30rem;
+    background-color: #fff;
+    border-radius: 4rem;
+  }
+
+  .input {
+    margin: 5px 0;
+    border-width: medium;
+    background: var(--color-secundary-add);
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 0.8rem;
+    
+}
+  
+  @media (max-width: 40rem) {
+    .modal {
+      padding: 2rem calc(2rem + 15px) 2rem 2rem;
+    }
+  }

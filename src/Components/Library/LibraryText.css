@@ -1,0 +1,40 @@
+.icons-area {
+  padding-left: 5rem;
+  justify-content: space-evenly;
+}
+
+.back-button {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    }
+
+.text-content {
+  margin-left: 3rem;
+}
+
+.body-text{
+    padding-top: 2rem;
+    text-justify: newspaper;
+}
+
+.action-icon {
+  padding: 0.5rem;
+  color: rgb(71, 71, 71);
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.text-title {
+  width: 300px;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  font-size: 12px;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}

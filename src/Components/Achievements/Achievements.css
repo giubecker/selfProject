@@ -1,0 +1,82 @@
+.achievements-cards{
+    text-align: center;
+ 
+ }
+ 
+ .medal-card {
+   display: flex;
+   justify-content: center;
+     padding: 1rem;
+     border-radius: 1rem;
+     width: 130px;
+     height: 130px;
+     background:#c9f8f4;
+     margin: 0.5rem;
+ }
+ .trophy-card {
+  display: flex;
+  justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 130px;
+    height: 130px;
+    background:#c9f8f4;
+    margin: 0.5rem;
+}
+ .stars{
+  display: flex;
+  justify-content: center;
+    color: grey;
+  }
+
+  .progress-bar {
+    background-color: #3dcfc3;
+  }
+
+  .level-line{
+    padding-left: 9rem;
+  }
+  .level{
+    padding-left: 1rem;
+    font-weight: 600;
+  }
+
+
+  .photo{
+    border-radius: 1rem;
+  }
+
+  .name{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .medal-title{
+    padding-top: 0rem;
+  }
+
+  .trophy-title{
+    padding-top: 0rem;
+  }
+
+  .medal-icon{
+    color: rgb(105, 105, 105);
+    padding: 0rem;
+  }
+
+  .trophy-icon{
+    color: #3fbcb2;
+    padding: 1rem;
+  }
+  
+  .column-prizes-1{
+    padding-left: 3rem;
+    flex: 65%;
+    justify-items: center;
+  }
+
+  .column-prizes-2{
+    flex: 35%;
+
+    justify-items: center;
+  }

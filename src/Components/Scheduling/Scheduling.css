@@ -1,0 +1,32 @@
+.booking {
+    min-height: 400;
+    min-width: 400;
+    display: flex;
+    background-color: crimson;
+}
+
+.scheduling-button {
+    width: 98% ;
+    height: 6.6rem;
+    background: #3fbcb2;
+    color: #fff;
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    text-decoration: none important!;
+    margin: 1rem;
+}
+
+.dateTime {
+    text-align: left;
+}
+
+
+.scheduling-button:hover {
+    transition: color 400ms;
+    background: var(--color-secondary-button);
+  }

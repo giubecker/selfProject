@@ -1,0 +1,35 @@
+.row {
+    display: flex;
+    
+  }
+  
+  .graphic-description {
+    flex: 50%;
+    padding: 1rem;
+  }
+
+  .exam-card{
+    padding: 3rem;
+    margin: 2rem;
+    background-color: #c9f8f1;
+    border-radius: 3rem;
+    width: 500;
+    height: 250px;
+  }
+
+  .status{
+  font-weight: 600;
+  color: rgb(65, 134, 134);
+  }
+
+  .exam-content{
+    padding: 2rem;
+  }
+.description{
+  text-align: justify;
+  padding: 1rem;
+}
+
+  h5 {
+    font-size: 1.2rem;
+  }

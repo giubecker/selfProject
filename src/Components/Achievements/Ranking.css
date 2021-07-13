@@ -1,0 +1,77 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+  }
+  .box-ranking {
+  margin-top: -40px;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  width: 30%;
+  height:max-content;
+  background: #fff;
+  border-radius: 40px;
+  z-index: 1000;
+  }
+
+.column-ranking {
+  margin-left: 1rem;
+  display: flex;
+  width: 350px;
+  justify-content: center;
+}
+.ranking-card {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 300px;
+  height: 90px;
+  background: #c9f8f4;
+  margin: 0.5rem;
+}
+
+.level {
+  font-weight: 600;
+}
+.show-button{
+  width: 30px;
+  font-weight: 600;
+  color: #888a8a;
+  border-radius: 3rem;
+  border:transparent;
+  background: transparent;
+}
+
+.progress {
+  justify-content: center;
+  margin-left: 2rem;
+  width: 200px;
+}
+
+.ranking-column1 {
+  padding-left: 1rem;
+  width: 5rem;
+  color: rgb(105, 105, 105);
+  font-weight: 600;
+  flex: 25%;
+  font-size: 40px;
+  justify-items: center;
+}
+
+.ranking-column2 {
+  padding-top:1rem;
+  color: rgb(105, 105, 105);
+  font-size: 17px;
+  flex: 75%;
+
+  justify-items: center;
+}
+
+.position{
+  height: 30px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

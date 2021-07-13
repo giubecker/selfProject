@@ -1,0 +1,64 @@
+.home {
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.home-card {
+  display: flex;
+  color: gray;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 250px;
+  height: 50px;
+  background: #def5f3;
+  margin: 0.5rem;
+}
+
+.progress-home{
+  margin-left: 0rem;
+}
+
+.title {
+  font-weight: 600;
+  color: rgb(104, 105, 105);
+}
+
+.home1 {
+  flex-direction: column;
+  justify-content: center;
+  flex: 50%;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.home2 {
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex: 50%;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.notification0 {
+  display: flex;
+}
+.notification-icon {
+  width: 50px;
+  height: 50px;
+  padding-top: 0rem;
+}
+
+.notification1 {
+  flex: 10%;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.notification2 {
+  flex: 90%;
+  margin-top: 0px;
+  padding-right: 2.5rem;
+}
