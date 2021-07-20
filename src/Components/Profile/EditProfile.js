@@ -26,7 +26,7 @@ export const EditProfile = () => {
   const [values, setValues] = useState(initialValue);
   useEffect(() => {
     axios.get(`http://localhost:9002/profiles/${id}`).then((response) => {
-      setProfiles(response.data);
+      setValues(response.data);
       console.log(response.data);
     });
   }, []);
@@ -36,156 +36,175 @@ export const EditProfile = () => {
     setValues({ ...values, [name]: value });
   }
 
+  function onSubmit(event) {
+    event.preventDefault();
+    axios
+      .put(`http://localhost:9002/profiles/${id}`, values)
+      .then((response) => {
+        history.push("/questionnaires/success");
+      });
+  }
+
   return (
     <>
       <Sidebar />
       <div className="container">
         <div className="box">
           <p>MEU PERFIL</p>
-          <br />
+          <h5>Editar</h5>
           <div className="edit-profile-info">
-            <h4>Pessoal</h4>
-            <h5>
-              Nome Completo:{" "}
-              <input
-                id="name"
-                name="name"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.name || ""}
-              ></input>{" "}
-            </h5>
-            <h5>
-              Idade:{" "}
-              <input
-                id="age"
-                name="age"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.age || ""}
-              ></input>
-            </h5>
-            <h4>Contato</h4>
-            <h5>
-              Telefone:{" "}
-              <input
-                id="phone"
-                name="phone"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.phone || ""}
-              ></input>
-            </h5>
-            <h5>
-              E-mail:{" "}
-              <input
-                id="email"
-                name="email"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.email || ""}
-              ></input>
-            </h5>
-            <h5>
-              Endereço:{" "}
-              <input
-                id="adress"
-                name="adress"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.adress || ""}
-              ></input>
-            </h5>
-            <h5>
-              CEP:{" "}
-              <input
-                id="zipCode"
-                name="zipCode"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.zipCode || ""}
-              ></input>
-            </h5>
-            <h4>Outros</h4>
-            <h5>
-              Contato de Emergência:{" "}
-              <input
-                id="emergencyContact"
-                name="emergencyContact"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.emergencyContact || ""}
-              ></input>
-            </h5>
-            <h5>
-              Telefone:{" "}
-              <input
-                id="emergencyPhone"
-                name="emergencyPhone"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.emergencyPhone || ""}
-              ></input>
-            </h5>
-            <h5>
-              Tipo Sanguíneo:{" "}
-              <input
-                id="bloodType"
-                name="bloddType"
-                type="text"
-                className="input"
-                onChange={onChange}
-                value={profile.bloodType || ""}
-              ></input>
-            </h5>
-            <h5>
-              Medicamentos:{" "}
-              <input
-                id="drugs"
-                name="drugs"
-                type="text"
-                className="input"
-                value={profile.drugs || ""}
-                onChange={onChange}
-                name="medicamentos"
-              ></input>
-            </h5>
-            <h5>Observações: </h5>
-            <textarea
-              id="notes"
-              name="notes"
-              type="text"
-              className="input"
-              onChange={onChange}
-              value={profile.notes || ""}
-            ></textarea>
-          </div>
-          <br />
-          <div>
-            <button
-              className="button"
-              onClick={() => {
-                axios
-                  .put("http://localhost:9002/profiles/1", values)
-                  .then((response) => {
-                    history.push("/success");
-                  });
-              }}
-            >
-              Salvar
-            </button>
-          
-              {" "}
-              <button onClick={() => history.goBack()}  className="button">Cancelar</button>
-     
+            <form onSubmit={onSubmit}>
+              <br /> <h4>Pessoal</h4>
+              <div>
+                <label htmlFor="name"> Nome Completo:&nbsp;</label>
+                <input
+                  id="name"
+                  name="name"
+                  required="required" 
+                  type="text"
+                  className="input"
+                  onChange={onChange}
+                  value={values.name || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="age"> Idade: &nbsp;</label>
+                <input
+                  id="age"
+                  name="age"
+                  required="required" 
+                  type="text"
+                  className="input"
+                  onChange={onChange}
+                  value={values.age || ""}
+                ></input>
+              </div>
+              <br />
+              <h4>Contato</h4>
+              <div>
+                <label htmlFor="phone"> Telefone: &nbsp;</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  required="required" 
+                  type="text"
+                  className="input"
+                  onChange={onChange}
+                  value={values.phone || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="email"> Email: &nbsp;</label>
+                <input
+                  id="email"
+                  name="email"
+                  required="required" 
+                  type="text"
+                  className="input"
+                  onChange={onChange}
+                  value={values.email || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="address"> Endereço &nbsp;</label>
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  required="required" 
+                  className="input"
+                  onChange={onChange}
+                  value={values.address || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="zipCode"> CEP: &nbsp;</label>
+                <input
+                  id="zipCode"
+                  name="zipCode"
+                  type="text"
+                  required="required" 
+                  className="input"
+                  onChange={onChange}
+                  value={values.zipCode || ""}
+                ></input>
+              </div>
+              <br />
+              <h4>Outros</h4>
+              <div>
+                <label htmlFor="emergencyContact"> Contato de Emergência: &nbsp;</label>
+                <input
+                  id="emergencyContact"
+                  name="emergencyContact"
+                  type="text"
+                  required="required" 
+                  className="input"
+                  onChange={onChange}
+                  value={values.emergencyContact || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="emergencyPhone"> Telefone:&nbsp;</label>
+                <input
+                  id="emergencyPhone"
+                  name="emergencyPhone"
+                  type="text"
+                  required="required" 
+                  className="input"
+                  onChange={onChange}
+                  value={values.emergencyPhone || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="bloodType"> Tipo sanguíneo:&nbsp;</label>
+                <input
+                  id="bloodType"
+                  name="bloodType"
+                  type="text"
+                  required="required" 
+                  className="input"
+                  onChange={onChange}
+                  value={values.bloodType || ""}
+                ></input>
+              </div>
+              <div>
+                <label htmlFor="drugs"> Medicamentos:&nbsp;</label>
+                <textarea
+                  id="drugs"
+                  name="drugs"
+                  type="text"
+                  required="required" 
+                  className="doubt-input"
+                  onChange={onChange}
+                  value={values.drugs || ""}
+                ></textarea>
+              </div>
+              <div className="column-notes">
+                <label htmlFor="notes"> Observações:&nbsp;</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  type="text"
+                  required="required" 
+                  className="doubt-input"
+                  onChange={onChange}
+                  value={values.notes || ""}
+                ></textarea>
+              </div>
+              <div className="buttons">
+                <Link to="/success">
+                  <button className="button" type="submit">
+                    {" "}
+                    salvar
+                  </button>
+                </Link>
+                <Link to="/profile">
+                  <button onClick={() => history.goBack()} className="button">
+                    Cancelar
+                  </button>
+                </Link>
+              </div>
+            </form>
           </div>
         </div>
       </div>

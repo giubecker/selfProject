@@ -12,6 +12,7 @@
      height: 130px;
      background:#c9f8f4;
      margin: 0.5rem;
+     padding-top: 2rem;
  }
  .trophy-card {
   display: flex;
@@ -77,6 +78,5 @@
 
   .column-prizes-2{
     flex: 35%;
-
     justify-items: center;
   }

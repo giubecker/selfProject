@@ -28,7 +28,7 @@ export const Instructions = () => {
           <h5>Número de questões: {questionnaire.questionsQuantity}</h5>
 
 
-          <div class="row buttons-area">
+          <div className="row buttons-area">
             <Link to={`/questionnaires/new/${id}`}>
               <button className="alerts-button">Iniciar </button>
             </Link>

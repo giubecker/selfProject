@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Schedule.css";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../System/Sidebar";
@@ -14,8 +14,10 @@ export const NewSchedule = () => {
   const history = useHistory();
   const [values, setValues] = useState({});
   const [dropdown, setDropdown] = useState("Selecione");
+  const [type, setType] = useState("");
   const [dates, setDates] = useState([]);
   const [date, setDate] = useState([initialValue]);
+  const [remove, setRemove] = useState({});
 
   useEffect(() => {
     axios.get("http://localhost:9002/agendamentos").then((response) => {
@@ -23,19 +25,33 @@ export const NewSchedule = () => {
     });
   }, []);
 
+  function onSubmit(event, index) {
+    event.preventDefault();
+    console.log(remove.id);
+
+    axios
+      .post("http://localhost:9002/reserved", values)
+      //axios.delete("http://localhost:9002/agendamentos/1", values)
+      .then((response) => {
+        history.push("/success");
+      });
+  }
+
   function onChange(event) {
-    const { name, value} = event.target;
-    setDropdown(event.target.value);
+    const { name, value } = event.target;
     setValues({ ...values, [name]: value });
   }
 
-  function onSubmit(event) {
-    event.preventDefault();
-    axios.post("http://localhost:9002/reservados", values).then((response) => {
-      history.push("/success");
-    });  
+  function onChangeRoutine(event) {
+    const { name, value } = event.target;
+    setType({ ...values, [name]: value });
   }
 
+  function onChangeOption(event) {
+    const { name, value } = event.target;
+    setDropdown({ ...values, [name]: value });
+    setRemove({ [name]: value });
+  }
 
   return (
     <>
@@ -45,46 +61,53 @@ export const NewSchedule = () => {
           <div className="content">
             <h1 className="title">Novo Agendamento</h1>
             <form onSubmit={onSubmit}>
-              {date.map((date, index) => (
-                <div key={date.id} className="form">
-                  <h2></h2>
-                  <label>Tipo: </label>
-                  <select
-                    className="input"
-                    name="type"
-                    value={dropdown}
-                    onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
-                  >
-                    <option value="Rotina">Rotina</option>
-                    <option value="Urgência">Urgência</option>
-                    <option value="Outros">Outros</option>
-                  </select>
-                  <br />
-                  <label>Horários:</label>
-                  <select
-                    className="input"
-                    value={dropdown}
-                    name="date"
-                    onChange={onChange}
-                  >
-                    {dates.map((date, index) => (
-                      <option value={date.dateTime} onChange={onChange}>
-                        {date.dateTime}
-                      </option>
-                    ))}
-                  </select>
-                  <br />
+              <div key={date.id} className="form">
+                <h2></h2>
+                <label>Tipo: </label>
+                <select className="input" name="type" onChange={onChange}>
+                  <option name="date" onChange={onChangeRoutine} value="Nenhum Selecionado">
+                    Selecione
+                  </option>
 
-                  <br />
-                  <label>Observações: </label>
-                  <textarea
-                    className="input"
-                    name="notes"
-                    onChange={onChange}
-                  ></textarea>
-                  <br />
-                </div>
-              ))}
+                  <option name="date" onChange={onChangeRoutine} value="Rotina">
+                    Rotina
+                  </option>
+                  <option
+                    name="date"
+                    onChange={onChangeRoutine}
+                    value="Urgência"
+                  >
+                    Urgência
+                  </option>
+                  <option name="date" onChange={onChangeRoutine} value="Outros">
+                    Outros
+                  </option>
+                </select>
+                <br />
+                <label>Horários:</label>
+                <select className="input" name="date" onChange={onChange}>
+                  {dates.map((date, index) => (
+                    <option
+                      name="date"
+                      value={date.dateTime}
+                      onChange={() => onChange}
+                    >
+                      {date.dateTime}
+                    </option>
+                  ))}
+                </select>
+
+                <br />
+                <label htmlFor="notes"> Observações:&nbsp;</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  required="required" 
+                  className="doubt-input"
+                  onChange={onChange}
+                ></textarea>
+                <br />
+              </div>
               <Link to="/scheduling">
                 {" "}
                 <button className="button" type="">

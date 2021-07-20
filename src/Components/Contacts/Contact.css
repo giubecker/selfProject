@@ -11,13 +11,17 @@
 }
 
 .contact-image {
-  width: 100px;
+  width: 150px;
   border-radius: 1rem;
 }
 
 .contact-card-column1 {
   flex: 30%;
   justify-items: center;
+}
+
+.back-button-contact{
+ margin-left: 7rem ;
 }
 
 .contact-card-column2 {

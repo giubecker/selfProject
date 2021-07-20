@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "../System/Sidebar";
 import axios from "axios";
 import { Accordion, AccordionTab } from "primereact/accordion";
+import "./Protocols.css";
 
 export const Protocols = () => {
   const [protocols, setProtocols] = useState([]);
@@ -23,7 +24,7 @@ export const Protocols = () => {
               <div key={protocol.id} className="doubts-container">
                 <Accordion>
                   <AccordionTab header={protocol.title}>
-                    <a>{protocol.description}</a>
+                    <div>{protocol.description}</div>
                   </AccordionTab>
                 </Accordion>
               </div>
@@ -33,31 +34,26 @@ export const Protocols = () => {
           <div className="meu-protocolo">
             <p>MEU PROTOCOLO</p>
             Reversão de Obesidade
-            <ul>
-              <li>
+            <ul className="phase-list">
+              <li className="protocol-phase">
                 {" "}
-                Fase 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor
+               <span className="phase-title"> Fase 1:</span> Classificação, diagnóstico e manejo da obesidade
               </li>
-              <li>
+              <li className="protocol-phase">
                 {" "}
-                Fase 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor
+                <span className="phase-title"> Fase 2:</span>  Organização da linha de cuidado das pessoas com sobrepeso e obesidade
               </li>
-              <li>
+              <li className="protocol-phase">
                 {" "}
-                Fase 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor
+                <span className="phase-title"> Fase 3:</span>  Classificação do estado nutricional
               </li>
-              <li>
+              <li className="protocol-phase">
                 {" "}
-                Fase 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor
+                <span className="phase-title"> Fase 4:</span>  Acompanhamento da evolução do estado nutricional
               </li>
-              <li>
+              <li className="protocol-phase">
                 {" "}
-                Fase 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor
+                <span className="phase-title"> Fase 5:</span>  Avalição final de condições endócrinas e risco cardiovascular
               </li>
             </ul>
           </div>

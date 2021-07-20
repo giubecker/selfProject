@@ -25,7 +25,7 @@ export const Doubts = () => {
     event.preventDefault();
     axios.post("http://localhost:9002/doubts", values).then((response) => {
       history.push("doubts/success");
-    });;
+    });
   }
 
   const [doubts, setDoubts] = useState([]);
@@ -42,8 +42,8 @@ export const Doubts = () => {
       <div className="container">
         <div className="box">
           <p>DÚVIDAS FREQUENTES</p>
-          <br/>
-          <div className="system-container">
+          <br />
+          <div className="doubts-container">
             <div className="column">
               {doubts.map((doubt, index) => (
                 <div key={index} className="doubts-container">
@@ -54,8 +54,8 @@ export const Doubts = () => {
                   </Accordion>
                 </div>
               ))}
-              <div className="column">
-              <br/>
+              <div className="column ask">
+                <br />
                 <h5>Não encontrou sua dúvida? Fale conosco</h5>
                 <form onSubmit={onSubmit}>
                   <div>
@@ -65,16 +65,16 @@ export const Doubts = () => {
                         id="mensagem"
                         name="pergunta"
                         onChange={onChange}
+                        required="required" 
                         placeholder="Escreva aqui a sua dúvida"
                       ></textarea>
                       <br />
                     </div>
                   </div>
                   <div>
-<button className="button" type="submit">
+                    <button className="button doubt-button" type="submit">
                       Enviar
                     </button>
-
                   </div>
                 </form>
               </div>

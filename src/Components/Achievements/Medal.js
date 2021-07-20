@@ -4,6 +4,7 @@ import axios from "axios";
 import Sidebar from "../System/Sidebar";
 import * as FaIcons from "react-icons/fa";
 import "./Prize.css";
+import Stars from "../Achievements/Stars"
 
 export const Medal = () => {
   const history = useHistory();
@@ -54,6 +55,7 @@ export const Medal = () => {
             })()}
             <h5 className="prize-title">{medal.title}</h5>
             <div className="row stars">
+            {/* <Stars stars={medal.stars} /> */}
               {(() => {
                 switch (medal.stars) {
                   case 1:

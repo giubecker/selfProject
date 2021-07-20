@@ -1,6 +1,6 @@
 .input {
     margin: 5px 0;
-    border-width: medium;
+    border-width: thin;
     background: var(--color-secundary-add);
     padding: 6px 12px;
     border: 1px solid #fff;
@@ -9,10 +9,22 @@
 }
 
 .profile-info {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding-left: 10rem ;
     padding-right: 10rem ;
     
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.profile-row{
+    margin-left: 0rem;
+    padding-top: 1.5rem;
 }
 
 .box {

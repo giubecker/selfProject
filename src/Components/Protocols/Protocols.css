@@ -6,7 +6,6 @@
 
   a :hover{
     text-decoration: none;
-    color: #6842C2;
   }
 
   .meu-protocolo{
@@ -19,4 +18,21 @@
   
   .column {
     flex: 50%;
+  }
+
+  .protocol-phase{
+    padding-top: 2rem;
+    
+  }
+
+  .phase-list{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 5rem;
+  }
+
+  .phase-title{
+    font-weight: 600;
+
   }

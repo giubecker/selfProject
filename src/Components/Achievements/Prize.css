@@ -19,7 +19,7 @@
 
 .column-prize {
   flex-direction: column;
-  margin-left: 4rem;
+  margin: 2rem;
   width: 170px;
   justify-content: center;
 }

@@ -10,8 +10,8 @@ export const ExitAlert = () => {
         <div className="box-alert">
           <p>Deseja sair?</p>
           <br />
-          <div class="row buttons-area">
-            <Link to="/login">
+          <div className="row buttons-area">
+            <Link to="/">
               <button className="alerts-button">Sim </button>
             </Link>
             <button className="alerts-button" onClick={() => history.goBack()}>

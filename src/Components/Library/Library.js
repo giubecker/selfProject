@@ -3,10 +3,8 @@ import Sidebar from "../System/Sidebar";
 import * as FaIcons from "react-icons/fa";
 import "./Library.css";
 import { ScrollPanel } from "primereact/scrollpanel";
-import { Card } from "primereact/card";
 import axios from "axios";
-import Capa from "../../assets/capa.png";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Library = () => {
   const [contents, setContents] = useState([]);
@@ -70,7 +68,7 @@ export const Library = () => {
                         <Link to={`/library/video/${content.id}`}>
                           <div key={content.id} className="content-item ">
                             <div className="column">
-                              <img src={Capa} className="image-content"></img>
+                              <img src={content.icon} className="image-content"></img>
                               <h4 className="content-title">{content.title}</h4>
                               <h5 className="content-description">
                                 {content.description}
@@ -148,7 +146,7 @@ export const Library = () => {
                         <Link to={`/library/recipe/${content.id}`}>
                           <div key={content.id} className="content-item ">
                             <div className="column">
-                              <img src={Capa} className="image-content"></img>
+                              <img src={content.icon} className="image-content"></img>
                               <h4 className="content-title">{content.title}</h4>
                               <h5 className="content-description">
                                 {content.description}
@@ -226,7 +224,7 @@ export const Library = () => {
                         <Link to={`/library/text/${content.id}`}>
                           <div key={key} className="content-item ">
                             <div className="column">
-                              <img src={Capa} className="image-content"></img>
+                              <img src={content.icon} className="image-content"></img>
                               <h4 className="content-title">{content.title}</h4>
                               <h5 className="content-description">
                                 {content.description}

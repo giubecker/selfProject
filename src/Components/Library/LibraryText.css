@@ -3,11 +3,13 @@
   justify-content: space-evenly;
 }
 
-.back-button {
+.back-button{
+  padding-left: 2.5rem;
   border-color: transparent;
   background-color: transparent;
+  padding-bottom: 1rem;
+  
 }
-
 .header{
     display: flex;
     flex-direction: column;
@@ -16,11 +18,12 @@
 
 .text-content {
   margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .body-text{
     padding-top: 2rem;
-    text-justify: newspaper;
+    text-align: justify;
 }
 
 .action-icon {

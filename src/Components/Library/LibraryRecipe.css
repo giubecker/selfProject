@@ -19,9 +19,12 @@
   justify-content: space-evenly;
 }
 
-.back-button {
+.back-button{
+  padding-left: 2.5rem;
   border-color: transparent;
   background-color: transparent;
+  padding-bottom: 1rem;
+  
 }
 
 .action-icon {
@@ -42,9 +45,10 @@
   display: flex;
 }
 
-.ingridients {
+.ingredients {
   padding-left: 3rem;
   flex: 50%;
+  text-align: start;
   justify-items: center;
 }
 
@@ -53,7 +57,7 @@
 }
 
 .recipe-image{
-    width: 250px;
+    width: 350px;
     height: 150px;
     object-fit: cover;
     border-radius: 1rem;
@@ -62,4 +66,6 @@
 
 .prepare {
   flex: 50%;
+  text-align: start;
+  padding-left: 2rem;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import StoreContext from "../Store/Context";
-import UIButton from "../Login/UIButton";
+import UIButton from "./UIButton";
 import * as FaIcons from "react-icons/fa";
 
 import "./Login.css";
@@ -59,31 +59,35 @@ const UserLogin = () => {
               <div className="user-login__form-control">
                 <label htmlFor="user">Usuário</label>
                 <br />
+                <div className="input-row">
                 <FaIcons.FaUser />
                 <input
-                  className="form"
+                  className="form-login"
                   id="user"
                   type="text"
                   name="user"
                   onChange={onChange}
                   value={values.user}
                 />
+                </div>
               </div>
               <div className="user-login__form-control">
                 <label htmlFor="password">Senha</label> <br />
-                <FaIcons.FaKey />
+                <div className="input-row">
+<FaIcons.FaKey />
                 <input
-                  className="form"
+                  className="form-login"
                   id="password"
                   type="password"
                   name="password"
                   onChange={onChange}
                   value={values.password}
                 />
+</div>
               </div>
             </div>
             {error && <div className="error">{error}</div>}
-            <div className="buttons">
+            <div className="buttons-login row">
               <UIButton
                 type="submit"
                 theme="contained-green"

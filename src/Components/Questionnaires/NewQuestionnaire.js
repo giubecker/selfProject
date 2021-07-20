@@ -32,7 +32,23 @@ export const NewQuestionnaire = () => {
   function onSubmit(event) {
     event.preventDefault();
     axios
-      .post("http://localhost:9002/answeredQuestionnaires", values)
+      .post("http://localhost:9002/answeredQuestionnaires", values);
+      axios.post('http://localhost:9002/answereds', {
+        title: `${questionnaire.title}`,
+        lastName: 'Flintstone',
+        status: 'aguardando avaliação',
+        questionsQuantity: ``,
+        points: null,
+        corrected: false,
+        observation: "Você receberá seu resultado assim que possível.",
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      axios.delete(`http://localhost:9002/questionnaires/${id}`)
       .then((response) => {
         history.push("/questionnaires/success");
       });
@@ -69,6 +85,7 @@ export const NewQuestionnaire = () => {
                               className="questionnaire-input"
                               key={question.id}
                               id={question.id}
+                              required="required" 
                               name={question.title}
                               type="text"
                               onChange={onChange}

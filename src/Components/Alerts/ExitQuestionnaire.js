@@ -12,7 +12,7 @@ export const ExitQuestionnaire = () => {
           <p>Deseja sair?</p>
           <br />
           <h5> Seu progresso será perdido</h5>
-          <div class="row buttons-area">
+          <div className="row buttons-area">
             <Link to="/questionnaires">
               <button className="alerts-button">Sim </button>
             </Link>

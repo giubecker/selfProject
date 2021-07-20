@@ -23,15 +23,19 @@ export const Contacts = () => {
           <div className="row contacts-row">
             <div className="column contacts">
               {" "}
-              {contacts.map((contact) => (
-                <Link to={`/contacts/contact/${contact.id}`}>
+              {contacts.slice(0, 4).map((contact) => (
+                <Link to={`/contacts/${contact.id}`}>
                   <div key={contact.id} className="row card">
                     <div className="card-column1">
                       <img className="image" src={contact.image}></img>
                     </div>
                     <div className="card-column2">
                       {contact.name}
-                      <br /> <FaIcons.FaGraduationCap />  {contact.ocupation} <br /> <FaIcons.FaPhone />{contact.phone}
+                      <br /> <FaIcons.FaGraduationCap /> {
+                        contact.ocupation
+                      }{" "}
+                      <br /> <FaIcons.FaPhone />
+                      {contact.phone}
                     </div>
                   </div>
                 </Link>
@@ -39,15 +43,19 @@ export const Contacts = () => {
             </div>
             <div className="column contacts">
               {" "}
-              {contacts.map((contact) => (
-                <Link to={`/contacts/contact/${contact.id}`}>
+              {contacts.slice(4, 8).map((contact) => (
+                <Link to={`/contacts/${contact.id}`}>
                   <div key={contact.id} className="row card">
                     <div className="card-column1">
                       <img className="image" src={contact.image}></img>
                     </div>
                     <div className="card-column2">
                       {contact.name}
-                      <br /> <FaIcons.FaGraduationCap />  {contact.ocupation} <br /> <FaIcons.FaPhone />{contact.phone}
+                      <br /> <FaIcons.FaGraduationCap /> {
+                        contact.ocupation
+                      }{" "}
+                      <br /> <FaIcons.FaPhone />
+                      {contact.phone}
                     </div>
                   </div>
                 </Link>

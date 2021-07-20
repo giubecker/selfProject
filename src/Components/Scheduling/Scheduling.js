@@ -24,7 +24,7 @@ export const Scheduling = () => {
             <Link key={schedule.id} to={`/scheduling/scheduled/${schedule.id}`}>
               <button className="questionnaire-button">
                 <div className="dateTime">{schedule.date}</div>
-                <div className="detalhes">{schedule.notes}</div>
+                <div className="type">{schedule.type}</div>
               </button>
             </Link>
           ))}

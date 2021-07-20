@@ -9,6 +9,14 @@
     width: 100vw;
 }
 
+.ask{
+    margin-left: 10rem;
+}
+
+.doubt-button{
+    margin-left: 16rem;
+}
+
 .doubts-container {
     font-family: Montserrat, sans-serif;
     margin-top: 1px;

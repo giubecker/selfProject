@@ -25,6 +25,10 @@
     text-align: left;
 }
 
+.type {
+    font-weight: 600;
+}
+
 
 .scheduling-button:hover {
     transition: color 400ms;

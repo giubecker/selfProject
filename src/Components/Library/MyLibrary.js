@@ -3,7 +3,6 @@ import Sidebar from "../System/Sidebar";
 import * as FaIcons from "react-icons/fa";
 import "./MyLibrary.css";
 import axios from "axios";
-import Capa from "../../assets/capa.png";
 import { Link, useHistory } from "react-router-dom";
 
 export const MyLibrary = () => {
@@ -41,9 +40,6 @@ export const MyLibrary = () => {
                 type="text"
                 onChange={(event) => setSearchTerm(event.target.value)}
               ></input>
-              <a>
-                <FaIcons.FaSearch />
-              </a>
             </div>
           </div>
           <div className="column">
@@ -66,10 +62,10 @@ export const MyLibrary = () => {
                   })
                   .map((content, key) =>
                     content.saved ? (
-                      <Link>
+                      <Link to={ content.video ? `/library/video/${content.id}` : content.text? `/library/text/${content.id}` : `/library/recipe/${content.id}`}  >
                         <div key={key} className="content-item ">
                           <div className="column">
-                            <img src={Capa} className="image-content"></img>
+                            <img src={content.icon} className="image-content"></img>
                             <h4 className="content-title">{content.title}</h4>
                             <h5 className="content-description">
                               {content.description}

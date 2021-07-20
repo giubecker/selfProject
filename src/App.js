@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import 'bootstrap';
-import Login from "./Components/Screens/Login";
+import Login from "./Components/Login/Login";
 import Home from './Components/Home/Home';
 import NewQuestionnaire from './Components/Questionnaires/NewQuestionnaire';
 import AnsweredQuestionnaire from './Components/Questionnaires/AnsweredQuestionnaire';
@@ -46,6 +46,7 @@ import DeleteAlert from "./Components/Alerts/DeleteAlert";
 import Trophy from "./Components/Achievements/Trophy";
 import SuccessQuestionnaire from "./Components/Alerts/SuccessQuestionnaire";
 import ExitQuestionnaire from "./Components/Alerts/ExitQuestionnaire";
+import SuccessDelete from "./Components/Alerts/SuccessDelete";
 
 function App() {
   return  (
@@ -58,7 +59,7 @@ function App() {
             renders the first one that matches the current URL. */}
        <StoreProvider>
        <Switch>
-          <Route exact path="/login">
+          <Route exact path="/">
             <Login />
           </Route>
           <RoutesPrivate exact path="/home">
@@ -91,7 +92,7 @@ function App() {
           <Route exact path="/contacts">
             <Contacts />
           </Route>
-          <Route exact path="/contacts/contact/:id">
+          <Route exact path="/contacts/:id">
             <Contact />
           </Route>
           <Route exact path="/library">
@@ -120,6 +121,9 @@ function App() {
           </Route>
           <Route exact path="/scheduling/scheduled/:id">
             <Scheduled />
+          </Route>
+          <Route exact path="/scheduling/successdelete">
+            <SuccessDelete />
           </Route>
           <Route exact path="/achievements">
             <Achievements />

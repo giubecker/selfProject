@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Schedule.css";
 import { useHistory, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import axios from "axios";
 import Sidebar from "../System/Sidebar";
@@ -19,31 +18,40 @@ export const EditSchedule = () => {
   const [schedule, setSchedule] = useState([initialValue]);
   const [dropdown, setDropdown] = useState("Selecione");
   const [dates, setDates] = useState([]);
+  const [remove, setRemove] = useState({});
+  const [type, setType] = useState("");
 
   function onChange(event) {
-    const { name, value, id } = event.target;
-    setDropdown(event.target.value);
+    const { name, value } = event.target;
     setValues({ ...values, [name]: value });
+  }
+
+  function onChangeRoutine(event) {
+    const { name, value } = event.target;
+    setType({ ...values, [name]: value });
+  }
+
+  function onChangeOption(event) {
+    const { name, value } = event.target;
+    setDropdown({ ...values, [name]: value });
+    setRemove({ [name]: value });
   }
 
   function onSubmit(event) {
     event.preventDefault();
-    axios.put("http://localhost:9002/reserved", values).then((response) => {
-      history.push(`/scheduling/scheduled/${id}`);
-    });
+    axios
+      .patch(`http://localhost:9002/reserved/${id}`, values)
+      .then((response) => {
+        history.push(`/scheduling/scheduled/${id}`);
+      });
   }
 
   useEffect(() => {
     axios.get(`http://localhost:9002/reserved/${id}`).then((response) => {
-      setSchedule(response.data);
-      console.log(response.data);
-    });
-  }, []);
-
-
-  useEffect(() => {
-    axios.get("http://localhost:9002/agendamentos").then((response) => {
-      setDates(response.data);
+      setValues(response.data);
+      axios.get("http://localhost:9002/agendamentos").then((response) => {
+        setDates(response.data);
+      });
     });
   }, []);
 
@@ -58,47 +66,70 @@ export const EditSchedule = () => {
               <div key={schedule.id} className="form">
                 <h2></h2>
                 <label>Tipo: &nbsp;</label>
-                  <select
-                    className="input"
-                    name="type"
-                    value={dropdown}
-                    onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
+                <select
+                  className="input"
+                  name="type"
+                  onChange={onChange} //onChange={(e) =>{setDropdown(e.target.value)}}
+                >
+                                  <option name="date" onChange={onChangeRoutine} value="Rotina">
+                    Selecione
+                  </option>
+                  <option name="date" onChange={onChangeRoutine} value="Rotina">
+                    Rotina
+                  </option>
+                  <option
+                    name="date"
+                    onChange={onChangeRoutine}
+                    value="Urgência"
                   >
-                    <option value="Rotina">Rotina</option>
-                    <option value="Urgência">Urgência</option>
-                    <option value="Outros">Outros</option>
-                  </select>
-                  <br />
+                    Urgência
+                  </option>
+                  <option name="date" onChange={onChangeRoutine} value="Outros">
+                    Outros
+                  </option>
+                </select>
+                <br />
                 <label>Horários: &nbsp;</label>
                 <select
-                    className="input"
-                    value={dropdown}
-                    name="date"
-                    onChange={onChange}
-                  >
-                    {dates.map((date, index) => (
-                      <option value={date.dateTime} onChange={onChange}>
-                        {date.dateTime}
-                      </option>
-                    ))}
-                  </select>
-                  <br />
+                  className="input"
+                  name="date"
+                  //placeholder={values.date}
+                  onChange={onChange}
+                >
+                  {dates.map((date, index) => (
+                    <option
+                      name="date"
+                      value={date.dateTime}
+                      onChange={() => onChangeOption}
+                    >
+                      {date.dateTime}
+                    </option>
+                  ))}
+                </select>
                 <br />
-                <label>Observações: &nbsp;</label>
-                {schedule.notes}
+                
+                                <label htmlFor="notes"> Observações:&nbsp;</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  type="text"
+                  className="doubt-input"
+                  onChange={onChange}
+                  value={values.notes || ""}
+                ></textarea>
+                              <div className="column-notes">
+
+              </div>
                 <br />
               </div>
-              <Link to="/scheduling">
-                {" "}
-                <button className="button" type="submit">
-                  Salvar
-                </button>
-              </Link>{" "}
-              <Link to={`/scheduling/scheduled/${id}`}>
-                <button className="button">Cancelar</button>
-              </Link>
-              <Link to="/scheduling">
-              </Link>
+
+              <button className="button" type="submit">
+                Salvar
+              </button>
+
+              <button className="button" onClick={() => history.goBack()}>
+                Cancelar
+              </button>
             </form>
             <br />
           </div>

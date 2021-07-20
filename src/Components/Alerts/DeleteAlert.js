@@ -1,21 +1,22 @@
 import React from "react";
 import "./Alerts.css";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 
 export const DeleteAlert = () => {
+  const history = useHistory();
   return (
     <>
       <div className="container-alert">
         <div className="box-alert">
           <p>Deletar Agendamento?</p>
           <br />
-          <div class="row buttons-area">
-            <Link to="/scheduling">
+          <div className="row buttons-area">
+            <Link to="/scheduling/successdelete">
               <button className="alerts-button">Sim </button>
             </Link>
-            <Link to="/scheduling">
-              <button className="alerts-button">Não </button>
-            </Link>
+
+              <button className="alerts-button" onClick={() => history.goBack()}>Não </button>
+
           </div>
         </div>
       </div>

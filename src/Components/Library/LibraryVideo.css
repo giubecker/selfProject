@@ -14,8 +14,10 @@
 }
 
 .back-button{
+    padding-left: 2.5rem;
     border-color: transparent;
     background-color: transparent;
+    padding-bottom: 1rem;
     
 }
 

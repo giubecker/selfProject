@@ -1,7 +1,7 @@
 .videos {
     font-family: Montserrat, sans-serif;
     background-color: var(--color-background-primary);
-    color: #fff;
+    color: var(--color-text-title-lighter);
     text-align: center;
     overflow: auto;
     align-items: center;
@@ -36,6 +36,7 @@
 
 .content-icons-area{
     display: flex;
+    margin-top: 1rem;
     flex-direction: row;
     margin-left: 2rem;
 }
@@ -46,7 +47,7 @@
 }
 
 .my-library-link a{
-    color: #3fbcb2;
+    color: var(--color-background-primary);
 }
 
 .image-content{
@@ -56,7 +57,6 @@
     border-radius: 1rem;
     width: 220px;
     height: 150px;
-    background-color: tomato;
 }
 
 .content-item {
@@ -72,9 +72,11 @@
 
   .content-description{
       text-justify:auto;
+      text-decoration: none;
   }
 
 .content-title{
+    margin-bottom: 1rem;
     font-weight: 600;
     font-size: 12px;
     color: #3fbcb2;
