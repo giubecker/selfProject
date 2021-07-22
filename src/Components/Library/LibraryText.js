@@ -43,6 +43,7 @@ export const LibraryText = () => {
                   {
                     <button
                       className="action-icon"
+                      title="curtir"
                       onClick={() => {
                         setAction(!action);
                         axios
@@ -65,6 +66,7 @@ export const LibraryText = () => {
                   {
                     <button
                       className="action-icon"
+                      title="visto"
                       onClick={() => {
                         setAction(!action);
                         axios
@@ -87,6 +89,7 @@ export const LibraryText = () => {
                   {
                     <button
                       className="action-icon"
+                      title="salvar"
                       onClick={() => {
                         setAction(!action);
                         axios

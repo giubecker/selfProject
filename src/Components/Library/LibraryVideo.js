@@ -43,6 +43,7 @@ export const LibraryVideo = () => {
                   {
                     <button
                       className="action-icon"
+                      title="curtir"
                       name={"liked"}
                       onClick={() => {
                         setAction(!action);
@@ -65,6 +66,7 @@ export const LibraryVideo = () => {
                   {
                     <button
                       className="action-icon"
+                      title="visto"
                       onClick={() => {
                         setAction(!action);
                         axios
@@ -87,6 +89,7 @@ export const LibraryVideo = () => {
                   {
                     <button
                       className="action-icon"
+                      title="salvar"
                       onClick={() => {
                         setAction(!action);
                         axios

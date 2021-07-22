@@ -5,15 +5,10 @@ import Sidebar from "../System/Sidebar";
 import "primeicons/primeicons.css";
 import "primereact/resources/primereact.css";
 import "./Doubts.css";
-
 import { Accordion, AccordionTab } from "primereact/accordion";
 
-const initialValue = {
-  pergunta: "",
-  resposta: "",
-};
-
 export const Doubts = () => {
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [values, setValues] = useState({});
   function onChange(event) {
@@ -23,7 +18,9 @@ export const Doubts = () => {
 
   function onSubmit(event) {
     event.preventDefault();
+    setLoading(true);
     axios.post("http://localhost:9002/doubts", values).then((response) => {
+      setLoading(false);
       history.push("doubts/success");
     });
   }
@@ -64,17 +61,21 @@ export const Doubts = () => {
                         className="doubt-input"
                         id="mensagem"
                         name="pergunta"
+                        required={true}
                         onChange={onChange}
-                        required="required" 
                         placeholder="Escreva aqui a sua dúvida"
                       ></textarea>
                       <br />
                     </div>
                   </div>
                   <div>
-                    <button className="button doubt-button" type="submit">
-                      Enviar
-                    </button>
+                    {loading ? (
+                      "Carregando..."
+                    ) : (
+                      <button className="button doubt-button" type="submit">
+                        Enviar
+                      </button>
+                    )}
                   </div>
                 </form>
               </div>

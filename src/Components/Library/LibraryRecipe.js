@@ -42,6 +42,7 @@ export const LibraryRecipe = () => {
                   {
                     <button
                       className="action-icon"
+                      title="curtir"
                       name={"liked"}
                       onClick={() => {
                         setAction(!action);
@@ -64,6 +65,7 @@ export const LibraryRecipe = () => {
                   {
                     <button
                       className="action-icon"
+                      title="visto"
                       onClick={() => {
                         setAction(!action);
                         axios
@@ -86,6 +88,7 @@ export const LibraryRecipe = () => {
                   {
                     <button
                       className="action-icon"
+                      title="salvar"
                       onClick={() => {
                         setAction(!action);
                         axios

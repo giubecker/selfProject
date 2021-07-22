@@ -5,6 +5,7 @@ import axios from "axios";
 import Sidebar from "../System/Sidebar";
 
 export const NewQuestionnaire = () => {
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const [questionnaire, setQuestionnaire] = useState({});
   const history = useHistory();
@@ -31,12 +32,12 @@ export const NewQuestionnaire = () => {
 
   function onSubmit(event) {
     event.preventDefault();
+    setLoading(true);
+    axios.post("http://localhost:9002/answeredQuestionnaires", values);
     axios
-      .post("http://localhost:9002/answeredQuestionnaires", values);
-      axios.post('http://localhost:9002/answereds', {
+      .post("http://localhost:9002/answereds", {
         title: `${questionnaire.title}`,
-        lastName: 'Flintstone',
-        status: 'aguardando avaliação',
+        status: "aguardando avaliação",
         questionsQuantity: ``,
         points: null,
         corrected: false,
@@ -48,8 +49,10 @@ export const NewQuestionnaire = () => {
       .catch(function (error) {
         console.log(error);
       });
-      axios.delete(`http://localhost:9002/questionnaires/${id}`)
+    axios
+      .delete(`http://localhost:9002/questionnaires/${id}`)
       .then((response) => {
+        setLoading(false);
         history.push("/questionnaires/success");
       });
   }
@@ -85,14 +88,15 @@ export const NewQuestionnaire = () => {
                               className="questionnaire-input"
                               key={question.id}
                               id={question.id}
-                              required="required" 
+                              required={true}
+                              required="required"
                               name={question.title}
                               type="text"
                               onChange={onChange}
                             />
                             <br />
                           </div>
-                        )  : (
+                        ) : (
                           <select
                             className="input"
                             name={question.title}
@@ -111,16 +115,18 @@ export const NewQuestionnaire = () => {
                         )}
                       </div>
                     ))}
-
-                  <div>
-                    <button className="button" type="submit">
-                      {" "}
-                      Enviar{" "}
-                    </button>{" "}
-                    <Link to={`/questionnaires/new/${id}/exit`}>
-                      <button className="button"> Cancelar </button>
-                    </Link>
-                  </div>
+                  {loading ? (
+                    "Carregando"
+                  ) : (
+                    <div>
+                      <button className="button" type="submit">
+                        Enviar
+                      </button>
+                      <Link to={`/questionnaires/new/${id}/exit`}>
+                        <button className="button"> Cancelar </button>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </form>
             </div>

@@ -5,6 +5,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import * as FaIcons from "react-icons/fa";
 import Sidebar from "../System/Sidebar";
 import "./Achievements.css";
+import MedalModal from "./MedalModal";
 
 export const Achievements = () => {
   const [achievements, setAchievements] = useState({});

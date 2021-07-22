@@ -47,6 +47,8 @@ import Trophy from "./Components/Achievements/Trophy";
 import SuccessQuestionnaire from "./Components/Alerts/SuccessQuestionnaire";
 import ExitQuestionnaire from "./Components/Alerts/ExitQuestionnaire";
 import SuccessDelete from "./Components/Alerts/SuccessDelete";
+import SuccessProfile from "./Components/Alerts/SuccessProfile";
+import SuccessEdit from "./Components/Alerts/SuccessEdit";
 
 function App() {
   return  (
@@ -119,6 +121,9 @@ function App() {
           <Route exact path="/scheduling/scheduled/edit/:id">
             <EditSchedule />
           </Route>
+          <Route exact path="/scheduling/successedit">
+            <SuccessEdit />
+          </Route>
           <Route exact path="/scheduling/scheduled/:id">
             <Scheduled />
           </Route>
@@ -145,6 +150,9 @@ function App() {
           </Route>
           <Route exact path="/editprofile/:id">
             <EditProfile />
+          </Route>
+          <Route exact path="/profile/success">
+            <SuccessProfile />
           </Route>
           <Route exact path="/exams">
             <Exams />

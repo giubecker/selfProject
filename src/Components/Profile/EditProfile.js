@@ -5,6 +5,7 @@ import axios from "axios";
 import "./EditProfile.css";
 
 export const EditProfile = () => {
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
   const { id } = useParams();
   const initialValue = {
@@ -22,7 +23,6 @@ export const EditProfile = () => {
     drugs: "",
     notes: "",
   };
-  const [profile, setProfiles] = useState({});
   const [values, setValues] = useState(initialValue);
   useEffect(() => {
     axios.get(`http://localhost:9002/profiles/${id}`).then((response) => {
@@ -38,10 +38,12 @@ export const EditProfile = () => {
 
   function onSubmit(event) {
     event.preventDefault();
+    setLoading(true);
     axios
       .put(`http://localhost:9002/profiles/${id}`, values)
       .then((response) => {
-        history.push("/questionnaires/success");
+        setLoading(false);
+        history.push("/profile/success");
       });
   }
 
@@ -60,8 +62,9 @@ export const EditProfile = () => {
                 <input
                   id="name"
                   name="name"
-                  required="required" 
+                  required="required"
                   type="text"
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.name || ""}
@@ -72,8 +75,8 @@ export const EditProfile = () => {
                 <input
                   id="age"
                   name="age"
-                  required="required" 
                   type="text"
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.age || ""}
@@ -86,8 +89,8 @@ export const EditProfile = () => {
                 <input
                   id="phone"
                   name="phone"
-                  required="required" 
                   type="text"
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.phone || ""}
@@ -98,8 +101,8 @@ export const EditProfile = () => {
                 <input
                   id="email"
                   name="email"
-                  required="required" 
                   type="text"
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.email || ""}
@@ -111,7 +114,7 @@ export const EditProfile = () => {
                   id="address"
                   name="address"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.address || ""}
@@ -123,7 +126,7 @@ export const EditProfile = () => {
                   id="zipCode"
                   name="zipCode"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.zipCode || ""}
@@ -132,12 +135,15 @@ export const EditProfile = () => {
               <br />
               <h4>Outros</h4>
               <div>
-                <label htmlFor="emergencyContact"> Contato de Emergência: &nbsp;</label>
+                <label htmlFor="emergencyContact">
+                  {" "}
+                  Contato de Emergência: &nbsp;
+                </label>
                 <input
                   id="emergencyContact"
                   name="emergencyContact"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.emergencyContact || ""}
@@ -149,7 +155,7 @@ export const EditProfile = () => {
                   id="emergencyPhone"
                   name="emergencyPhone"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.emergencyPhone || ""}
@@ -161,7 +167,7 @@ export const EditProfile = () => {
                   id="bloodType"
                   name="bloodType"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="input"
                   onChange={onChange}
                   value={values.bloodType || ""}
@@ -173,7 +179,7 @@ export const EditProfile = () => {
                   id="drugs"
                   name="drugs"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="doubt-input"
                   onChange={onChange}
                   value={values.drugs || ""}
@@ -185,23 +191,23 @@ export const EditProfile = () => {
                   id="notes"
                   name="notes"
                   type="text"
-                  required="required" 
+                  required={true}
                   className="doubt-input"
                   onChange={onChange}
                   value={values.notes || ""}
                 ></textarea>
               </div>
               <div className="buttons">
-                <Link to="/success">
+                {loading ? (
+                  "Carregando..."
+                ) : (
                   <button className="button" type="submit">
                     {" "}
-                    salvar
+                    salvar{" "}
                   </button>
-                </Link>
+                )}
                 <Link to="/profile">
-                  <button onClick={() => history.goBack()} className="button">
-                    Cancelar
-                  </button>
+                  <button className="button"> Cancelar </button>
                 </Link>
               </div>
             </form>

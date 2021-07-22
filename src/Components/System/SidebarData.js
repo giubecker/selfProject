@@ -1,5 +1,6 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
+import Badge from 'react-bootstrap/Badge';
 
 export const SidebarData = [
   {
@@ -17,7 +18,7 @@ export const SidebarData = [
   {
     title: "Notificações",
     path: "/notifications",
-    icon: <FaIcons.FaExclamation />,
+    icon: <div><FaIcons.FaExclamation /> <Badge bg="secondary"></Badge></div>,
     cName: "nav-text",
   },
   {
