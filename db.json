@@ -783,7 +783,7 @@
       "id": 3
     }
   ],
-  "agendamentos": [
+  "datetimes": [
     {
       "id": 0,
       "dateTime": "Segunda-feira, 3 de maio às 6:00hrs",
@@ -799,7 +799,7 @@
     {
       "id": 2,
       "dateTime": "Segunda-feira, 3 de maio às 9:00hrs",
-      "disabled": true,
+      "disabled": false,
       "selected": false
     },
     {
@@ -877,17 +877,10 @@
   ],
   "reserved": [
     {
-      "date": "Sexta-feira, 7 de maio de 2021. 8:00",
       "type": "Urgência",
-      "notes": "testão",
-      "disabled": true,
+      "date": "Segunda-feira, 3 de maio às 8:00hrs",
+      "notes": "fgggg",
       "id": 1
-    },
-    {
-      "type": "Rotina",
-      "date": "Segunda-feira, 3 de maio às 9:00hrs",
-      "notes": "teste madruga",
-      "id": 2
     }
   ],
   "notifications": [
@@ -951,31 +944,5 @@
     "objective": "Conseguir amarrar os tênis",
     "weightLoss": 50,
     "generalProgress": 75
-  },
-  "schedule": [
-    {
-      "id": 0,
-      "type": [
-        "Rotina",
-        "Urgência",
-        "Outros"
-      ],
-      "date": [
-        "Segunda-feira, 3 de maio às 8:00hrs",
-        "Segunda-feira, 3 de maio às 9:00hrs",
-        "Segunda-feira, 3 de maio de 2021. 10:00",
-        "Segunda-feira, 3 de maio de 2021. 11:00",
-        "Terça-feira, 4 de maio de 2021. 8:00",
-        "Terça-feira, 4 de maio de 2021. 9:00",
-        "Terça-feira, 4 de maio de 2021. 10:00",
-        "Terça-feira, 4 de maio de 2021. 11:00",
-        "Quarta-feira, 5 de maio de 2021. 8:00",
-        "Quarta-feira, 5 de maio de 2021. 9:00",
-        "Quarta-feira, 5 de maio de 2021. 10:00",
-        "Quarta-feira, 5 de maio de 2021. 11:00",
-        "Quinta-feira, 6 de maio de 2021. 8:00",
-        "Sexta-feira, 7 de maio de 2021. 8:00"
-      ]
-    }
-  ]
+  }
 }

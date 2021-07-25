@@ -10,12 +10,23 @@ export const NewSchedule = () => {
   const history = useHistory();
   const [values, setValues] = useState({});
   const [dates, setDates] = useState([]);
+  const types = [
+    { title: "Rotina", selected: false },
+    { title: "Urgência", selected: false },
+    { title: "Outros", selected: false },
+  ];
 
-  useEffect(() => {
-    axios.get("http://localhost:9002/agendamentos").then((response) => {
+  useEffect(async () => {
+    await axios.get("http://localhost:9002/datetimes").then((response) => {
       setDates(response.data);
     });
   }, []);
+
+  function onChange(event) {
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
+    console.log(values);
+  }
 
   function onSubmit(event) {
     event.preventDefault();
@@ -23,7 +34,7 @@ export const NewSchedule = () => {
 
     dates.forEach((date, index) => {
       if (date.dateTime == values.date) {
-        axios.patch(`http://localhost:9002/agendamentos/${index}`, {
+        axios.patch(`http://localhost:9002/datetimes/${index}`, {
           disabled: true,
         });
       }
@@ -32,12 +43,6 @@ export const NewSchedule = () => {
       setLoading(false);
       history.push("/success");
     });
-  }
-
-  function onChange(event) {
-    const { name, value } = event.target;
-    setValues({ ...values, [name]: value });
-    console.log(values);
   }
 
   return (
@@ -50,50 +55,23 @@ export const NewSchedule = () => {
             <form onSubmit={onSubmit}>
               <div className="form">
                 <h2></h2>
-                <label>Tipo: </label>
-                <select
-                  required
-                  className="input"
-                  name="type"
-                  onChange={onChange}
-                >
-                  <option
-                    key="00"
-                    name="date"
-                    value=""
-                    selected
-                    disabled={true}
-                  >
+                <label>Tipo: &nbsp;</label>
+                <select className="input" name="type" onChange={onChange}>
+                  <option name="date" onChange={onChange}>
                     {" "}
                     Selecione{" "}
                   </option>
-                  <option
-                    key="01"
-                    name="date"
-                    onChange={onChange}
-                    value="Rotina"
-                  >
-                    {" "}
-                    Rotina{" "}
-                  </option>
-                  <option
-                    key="02"
-                    name="date"
-                    onChange={onChange}
-                    value="Urgência"
-                  >
-                    {" "}
-                    Urgência{" "}
-                  </option>
-                  <option
-                    key="03"
-                    name="date"
-                    onChange={onChange}
-                    value="Outros"
-                  >
-                    {" "}
-                    Outros{" "}
-                  </option>
+                  {types.map((type, key) => (
+                    <option
+                      key={key}
+                      name="date"
+                      value={type.title}
+                      onChange={onChange}
+                    >
+                      {" "}
+                      {type.title}{" "}
+                    </option>
+                  ))}
                 </select>
                 <br />
                 <label>Horários:</label>

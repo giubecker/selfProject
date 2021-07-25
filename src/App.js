@@ -127,6 +127,9 @@ function App() {
           <Route exact path="/scheduling/scheduled/:id">
             <Scheduled />
           </Route>
+          <Route exact path="/scheduling/delete/:id">
+            <DeleteAlert />
+          </Route>
           <Route exact path="/scheduling/successdelete">
             <SuccessDelete />
           </Route>
@@ -165,9 +168,6 @@ function App() {
           </Route>
           <Route exact path="/doubts/success">
             <SuccessDoubt />
-          </Route>
-          <Route exact path="/delete">
-            <DeleteAlert />
           </Route>
           <Route exact path="/questionnaires/answered/:id">
             <AnsweredQuestionnaire />

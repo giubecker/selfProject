@@ -14,7 +14,6 @@ export const Scheduled = () => {
   };
   const { id } = useParams();
   const history = useHistory();
-  const [values, setValues] = useState({});
   const [schedule, setSchedule] = useState([initialValue]);
 
   useEffect(() => {
@@ -50,20 +49,10 @@ export const Scheduled = () => {
               <Link to={`/scheduling/scheduled/edit/${schedule.id}`}>
                 <button className="button">Editar</button>
               </Link>
-              <Link to="/scheduling">
+              <Link to={`/scheduling/delete/${id}`}>
                 <button
                   className="button"
                   type="button"
-                  onClick={() =>
-                    axios
-                      .delete(
-                        `http://localhost:9002/reserved/${schedule.id}`,
-                        values
-                      )
-                      .then((response) => {
-                        history.push("/delete");
-                      })
-                  }
                 >
                   Deletar
                 </button>
