@@ -6,26 +6,10 @@ import axios from "axios";
 import Sidebar from "../System/Sidebar";
 
 export const EditSchedule = () => {
-  var testes = document.getElementById("teste");
   const { id } = useParams();
   const history = useHistory();
   const [values, setValues] = useState({});
   const [dates, setDates] = useState([]);
-  function onChange(event) {
-    const { name, value } = event.target;
-    setValues({ ...values, [name]: value });
-  }
-
-  function onSubmit(event) {
-    event.preventDefault();
-    // setDates(dates.filter((e)=>(e !== dates.dateTime)));
-    // console.log(dates);
-    axios
-      .patch(`http://localhost:9002/reserved/${id}`, values)
-      .then(() => {
-        history.push('/scheduling/successedit');
-      });
-  }
 
   useEffect(() => {
     axios.get(`http://localhost:9002/reserved/${id}`).then((response) => {
@@ -34,8 +18,28 @@ export const EditSchedule = () => {
         setDates(response.data);
       });
     });
+    console.log(dates);
+    dates && dates.forEach( date => {
+      if(date.dateTime == values.date){
+        date['selected'] = true;
+      }
+    });
   }, []);
 
+  function onChange(event) {
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
+  }
+
+  function onSubmit(event) {
+    event.preventDefault();
+    axios
+      .patch(`http://localhost:9002/reserved/${id}`, values)
+      .then(() => {
+        history.push('/scheduling/successedit');
+      });
+  }
+  
   return (
     <>
       <Sidebar />
@@ -55,17 +59,17 @@ export const EditSchedule = () => {
                 </select>
                 <br />
                 <label>Horários: &nbsp;</label>
-                <select
-                  id="teste"
-                  className="input"
-                  name="date"
-                  onChange={onChange}
-                >
-                  {dates.map((date, index) => (
+                <select required className="input" name="date" onChange={onChange}>
+                <option name="date" value="" selected={true} disabled={true}> Selecione </option>
+                  {dates && dates.map((date) => (
+                    
                     <option
-                      //selected={values.date}
+                    id={date.id}
                       name="date"
+                      value={date.dateTime}
                       onChange={() => onChange}
+                      selected={date.selected}
+                      disabled={date.disabled}
                     >
                       {date.dateTime}
                     </option>

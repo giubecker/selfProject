@@ -786,122 +786,108 @@
   "agendamentos": [
     {
       "id": 0,
-      "dateTime": "Selecione",
-      "available": true
+      "dateTime": "Segunda-feira, 3 de maio às 6:00hrs",
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 1,
       "dateTime": "Segunda-feira, 3 de maio às 8:00hrs",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 2,
       "dateTime": "Segunda-feira, 3 de maio às 9:00hrs",
-      "available": true
+      "disabled": true,
+      "selected": false
     },
     {
       "id": 3,
       "dateTime": "Segunda-feira, 3 de maio de 2021. 10:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 4,
       "dateTime": "Segunda-feira, 3 de maio de 2021. 11:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 5,
       "dateTime": "Terça-feira, 4 de maio de 2021. 8:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 6,
       "dateTime": "Terça-feira, 4 de maio de 2021. 9:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 7,
       "dateTime": "Terça-feira, 4 de maio de 2021. 10:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 8,
       "dateTime": "Terça-feira, 4 de maio de 2021. 11:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 9,
       "dateTime": "Quarta-feira, 5 de maio de 2021. 8:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 10,
       "dateTime": "Quarta-feira, 5 de maio de 2021. 9:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 11,
       "dateTime": "Quarta-feira, 5 de maio de 2021. 10:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
       "id": 12,
       "dateTime": "Quarta-feira, 5 de maio de 2021. 11:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
-      "id": 10,
+      "id": 13,
       "dateTime": "Quinta-feira, 6 de maio de 2021. 8:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     },
     {
-      "id": 11,
+      "id": 14,
       "dateTime": "Sexta-feira, 7 de maio de 2021. 8:00",
-      "available": true
+      "disabled": false,
+      "selected": false
     }
   ],
   "reserved": [
     {
-      "date": "Segunda-feira, 3 de maio às 8:00hrs",
-      "type": "Outros",
-      "notes": "testão",
-      "id": 10
-    },
-    {
+      "date": "Sexta-feira, 7 de maio de 2021. 8:00",
       "type": "Urgência",
-      "date": "Terça-feira, 4 de maio de 2021. 8:00",
-      "notes": "teste",
-      "id": 17
-    },
-    {
-      "date": "Segunda-feira, 3 de maio às 8:00hrs",
-      "type": "Rotina",
-      "notes": "teste2",
-      "id": 18
+      "notes": "testão",
+      "disabled": true,
+      "id": 1
     },
     {
       "type": "Rotina",
       "date": "Segunda-feira, 3 de maio às 9:00hrs",
-      "notes": "teste no limite",
-      "id": 19
-    },
-    {
-      "type": "Urgência",
-      "date": "Terça-feira, 4 de maio de 2021. 8:00",
-      "notes": "teste 2",
-      "id": 21
-    },
-    {
-      "date": "Terça-feira, 4 de maio de 2021. 8:00",
-      "type": "Outros",
-      "notes": "mm",
-      "id": 22
-    },
-    {
-      "type": "Urgência",
-      "date": "Quarta-feira, 5 de maio de 2021. 11:00",
-      "notes": "teste",
-      "id": 23
+      "notes": "teste madruga",
+      "id": 2
     }
   ],
   "notifications": [
