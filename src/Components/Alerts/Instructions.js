@@ -29,10 +29,10 @@ export const Instructions = () => {
 
 
           <div className="row buttons-area">
-            <Link to={`/questionnaires/new/${id}`}>
+            <Link to={`/questionnaires/new/${id}`} style={{ textDecoration: 'none' }}>
               <button className="alerts-button">Iniciar </button>
             </Link>
-            <Link to="/questionnaires">
+            <Link to="/questionnaires" style={{ textDecoration: 'none' }}>
               <button className="alerts-button" onClick={() => history.goBack()}>Cancelar </button>
             </Link>
           </div>

@@ -24,7 +24,7 @@ export const Contacts = () => {
             <div className="column contacts">
               {" "}
               {contacts.slice(0, 4).map((contact) => (
-                <Link to={`/contacts/${contact.id}`}>
+                <Link to={`/contacts/${contact.id}`} style={{ textDecoration: 'none' }}>
                   <div key={contact.id} className="row card">
                     <div className="card-column1">
                       <img className="image" src={contact.image}></img>
@@ -44,7 +44,7 @@ export const Contacts = () => {
             <div className="column contacts">
               {" "}
               {contacts.slice(4, 8).map((contact) => (
-                <Link to={`/contacts/${contact.id}`}>
+                <Link to={`/contacts/${contact.id}`} style={{ textDecoration: 'none' }}>
                   <div key={contact.id} className="row card">
                     <div className="card-column1">
                       <img className="image" src={contact.image}></img>

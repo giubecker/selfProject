@@ -28,7 +28,7 @@ export const Questionnaires = () => {
           <h1>Questionários para responder:</h1>
           {questionnaires.map((questionnaire) => (
             <div key={questionnaire.id}>
-              <Link to={`/questionnaires/instructions/${questionnaire.id}`}>
+              <Link to={`/questionnaires/instructions/${questionnaire.id}`} style={{ textDecoration: 'none' }}>
                 <button className="questionnaire-button">
                   {questionnaire.title}{" "}
                   {`( ${questionnaire.questionsQuantity} questões )`}
@@ -41,7 +41,7 @@ export const Questionnaires = () => {
           <h1>Questionários corrigidos:</h1>
           {answereds.map((answered) => (
             <div key={answered.id}>
-              <Link to={`/questionnaires/answered/${answered.id}`}>
+              <Link to={`/questionnaires/answered/${answered.id}`} style={{ textDecoration: 'none' }}>
                 <button className="questionnaire-button">
                   {answered.title}{" "}
                   <div className="questionnaire-status">{answered.status}</div>

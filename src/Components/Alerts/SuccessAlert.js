@@ -10,7 +10,7 @@ export const SuccessAlert = () => {
           <p>Agendado com sucesso!</p>
           <br />
           <div className="row buttons-area">
-          <Link to="/scheduling">
+          <Link to="/scheduling" style={{ textDecoration: 'none' }}>
             <button className="alerts-button">Ok </button>
           </Link>
         </div>

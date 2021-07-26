@@ -62,7 +62,7 @@ export const MyLibrary = () => {
                   })
                   .map((content, key) =>
                     content.saved ? (
-                      <Link to={ content.video ? `/library/video/${content.id}` : content.text? `/library/text/${content.id}` : `/library/recipe/${content.id}`}  >
+                      <Link to={ content.video ? `/library/video/${content.id}` : content.text? `/library/text/${content.id}` : `/library/recipe/${content.id}`}  style={{ textDecoration: 'none' }}>
                         <div key={key} className="content-item ">
                           <div className="column">
                             <img src={content.icon} className="image-content"></img>

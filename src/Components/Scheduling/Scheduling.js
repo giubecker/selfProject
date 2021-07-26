@@ -21,7 +21,7 @@ export const Scheduling = () => {
           <br />
           <h1>Meus agendamentos</h1>
           {schedules.map((schedule, index) => (
-            <Link key={schedule.id} to={`/scheduling/scheduled/${schedule.id}`}>
+            <Link key={schedule.id} to={`/scheduling/scheduled/${schedule.id}`} style={{ textDecoration: 'none' }}>
               <button className="questionnaire-button">
                 <div className="dateTime">{schedule.date}</div>
                 <div className="type">{schedule.type}</div>
@@ -30,7 +30,7 @@ export const Scheduling = () => {
           ))}
           <br />
           <br />
-          <Link to="/scheduling/new">
+          <Link to="/scheduling/new" style={{ textDecoration: 'none' }}>
             <button className="questionnaire-button">NOVO AGENDAMENTO</button>
           </Link>
         </div>

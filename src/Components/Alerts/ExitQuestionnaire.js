@@ -13,10 +13,10 @@ export const ExitQuestionnaire = () => {
           <br />
           <h5> Seu progresso será perdido</h5>
           <div className="row buttons-area">
-            <Link to="/questionnaires">
+            <Link to="/questionnaires" style={{ textDecoration: 'none' }}>
               <button className="alerts-button">Sim </button>
             </Link>
-            <Link to={`/questionnaires/new/${id}`}>
+            <Link to={`/questionnaires/new/${id}`} style={{ textDecoration: 'none' }}>
               <button className="alerts-button">Não </button>
             </Link>
           </div>

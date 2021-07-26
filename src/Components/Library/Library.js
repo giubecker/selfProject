@@ -65,7 +65,7 @@ export const Library = () => {
                     })
                     .map((content) =>
                       content.video ? (
-                        <Link to={`/library/video/${content.id}`}>
+                        <Link to={`/library/video/${content.id}`} style={{ textDecoration: 'none' }}>
                           <div key={content.id} className="content-item ">
                             <div className="column">
                               <img src={content.icon} className="image-content"></img>
@@ -143,7 +143,7 @@ export const Library = () => {
                     })
                     .map((content) =>
                       content.recipe ? (
-                        <Link to={`/library/recipe/${content.id}`}>
+                        <Link to={`/library/recipe/${content.id}`} style={{ textDecoration: 'none' }}>
                           <div key={content.id} className="content-item ">
                             <div className="column">
                               <img src={content.icon} className="image-content"></img>
@@ -221,7 +221,7 @@ export const Library = () => {
                     })
                     .map((content, key) =>
                       content.text ? (
-                        <Link to={`/library/text/${content.id}`}>
+                        <Link to={`/library/text/${content.id}`} style={{ textDecoration: 'none' }}>
                           <div key={key} className="content-item ">
                             <div className="column">
                               <img src={content.icon} className="image-content"></img>

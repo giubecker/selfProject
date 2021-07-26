@@ -11,7 +11,7 @@ export const ExitAlert = () => {
           <p>Deseja sair?</p>
           <br />
           <div className="row buttons-area">
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <button className="alerts-button">Sim </button>
             </Link>
             <button className="alerts-button" onClick={() => history.goBack()}>
