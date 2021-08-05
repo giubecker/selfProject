@@ -72,7 +72,7 @@
       "name": "Giuliano Bohn Becker",
       "age": "28 anos",
       "points": 700,
-      "showPoints": true,
+      "showPoints": false,
       "phone": "(55) 99923-6666",
       "email": "giubohn@hotmail.com",
       "address": "Avenida Avaí 465",
@@ -799,7 +799,7 @@
     {
       "id": 2,
       "dateTime": "Segunda-feira, 3 de maio às 9:00hrs",
-      "disabled": false,
+      "disabled": true,
       "selected": false
     },
     {
@@ -878,9 +878,8 @@
   "reserved": [
     {
       "type": "Urgência",
-      "date": "Segunda-feira, 3 de maio às 8:00hrs",
-      "notes": "fgggg",
-      "id": 1
+      "date": "Segunda-feira, 3 de maio às 9:00hrs",
+      "id": 2
     }
   ],
   "notifications": [

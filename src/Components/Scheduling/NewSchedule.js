@@ -110,7 +110,7 @@ export const NewSchedule = () => {
                 <textarea
                   id="notes"
                   name="notes"
-                  required="required"
+                  placeholder="Quer adiantar alguma coisa? Fale para a gente..."
                   className="doubt-input"
                   onChange={onChange}
                 ></textarea>
